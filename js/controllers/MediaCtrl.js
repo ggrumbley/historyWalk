@@ -21,6 +21,7 @@
       };
       self.reqMedia = function() {
         console.log("You want to listen to track #" + self.selection);
+        console.log("You are in the " + self.entries[self.selection].name);
         self.selection = '';
       };
 
