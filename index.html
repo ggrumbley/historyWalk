@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="historyApp">
+
+<head>
+  <title>History Tools</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-controller="MediaCtrl as ctrl">
+  <div class="mediaSelect">
+    <div class="output">
+      {{ctrl.selection}}
+    </div>
+    <div class="keyPad">
+      <button class="inputBtn" name="btn0" value="0" ng-click="ctrl.updateSelection(0)">0</button>
+      <button class="inputBtn" name="btn1" value="1" ng-click="ctrl.updateSelection(1)">1</button>
+      <button class="inputBtn" name="btn2" value="2" ng-click="ctrl.updateSelection(2)">2</button>
+      <button class="inputBtn" name="btn3" value="3" ng-click="ctrl.updateSelection(3)">3</button>
+      <button class="inputBtn" name="btn4" value="4" ng-click="ctrl.updateSelection(4)">4</button>
+      <button class="inputBtn" name="btn5" value="5" ng-click="ctrl.updateSelection(5)">5</button>
+      <button class="inputBtn" name="btn6" value="6" ng-click="ctrl.updateSelection(6)">6</button>
+      <button class="inputBtn" name="btn7" value="7" ng-click="ctrl.updateSelection(7)">7</button>
+      <button class="inputBtn" name="btn8" value="8" ng-click="ctrl.updateSelection(8)">8</button>
+      <button class="inputBtn" name="btn9" value="9" ng-click="ctrl.updateSelection(9)">9</button>
+
+      <button class="inputBtn" name="playPause" ng-click="ctrl.reqMedia()">&#10073;&#10073; / &#9658;</button>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.js"></script>
+  <script type="text/javascript">
+    angular.module('historyApp', [])
+      .controller('MediaCtrl', [function () {
+        var self = this;
+        self.selection = '';
+        self.updateSelection = function(num) {
+          self.selection += num;
+        };
+        self.reqMedia = function() {
+          console.log("You want to listen to track #" + self.selection);
+          self.selection = '';
+        };
+
+      }]);
+  </script>
+</body>
+</html>
