@@ -1,12 +1,6 @@
-(function () {
-
-  'use strict';
-
-  angular
-    .module('historyApp')
-    .controller('MediaCtrl', MediaCtrl);
-
-    function MediaCtrl() {
+angular.module('historyApp')
+  .controller('MediaCtrl', [
+    function () {
       var self = this;
       self.entries = [
         {id: 1, name: 'Computer Room', text: 'This is where Gary Hacks on things.'},
@@ -25,5 +19,4 @@
         self.selection = '';
       };
 
-    };
-})();
+  }]);
