@@ -1,4 +1,6 @@
-<h1>Welcome to History Node!</h1>
-<a ui-sref="accordian">Accordian Flow</a>
-<br>
-<a ui-sref="mediaSelect">Media Select</a>
+
+<h2>Please select a walk:</h2>
+
+<div ng-repeat="walk in walks">
+  <a ui-sref="mediaSelect">{{walk.title}}</a>
+</div>

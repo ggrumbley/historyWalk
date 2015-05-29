@@ -9,7 +9,8 @@ app.config([
     $stateProvider
       .state('home', {
         url:'/',
-        templateUrl: 'js/home/_home.html'
+        templateUrl: 'js/home/_home.html',
+        controller: 'MainCtrl'
       })
       .state('accordian', {
         url: "/accordian",
@@ -25,15 +26,39 @@ app.config([
 app.factory('walks', [function () {
   var o = {
     walks: [
-      {title: 'Computer Room', text: 'This is where Gary Hacks on things.'},
-      {title: 'Bedroom', text: 'This is where Gary sleeps.'},
-      {title: 'Living Room', text: 'This is where Gary kicks it with Pippa and peeps.'},
-      {title: 'Kitchen', text: 'This is where Gary cooks up stuff.'},
-      {title: 'Backyard', text: 'This is where Gary throws balls for his puggle overlord.'}
+      {title: "Gary's House", walk: [
+        {location: 'Computer Room', text: 'This is where Gary Hacks on things.'},
+        {location: 'Bedroom', text: 'This is where Gary sleeps.'},
+        {location: 'Living Room', text: 'This is where Gary kicks it with Pippa and peeps.'},
+        {location: 'Kitchen', text: 'This is where Gary cooks up stuff.'},
+        {location: 'Backyard', text: 'This is where Gary throws balls for his puggle overlord.'}
+      ]},
+      {title: "Parl Blvd", walk: [
+        {location: 'Twiggs Coffee', text: 'Latte, latte.'},
+        {location: 'Parks & Rec', text: 'Swanky, swanky.'},
+        {location: 'Small Bar', text: 'Drinky, drinky.'},
+        {location: 'Plumeria', text: 'Veggie, veggie.'},
+        {location: 'Lancers', text: 'Divey, divey.'}
+      ]},
+      {title: "Your Mom's House", walk: [
+        {location: 'Twiggs Coffee', text: 'Latte, latte.'},
+        {location: 'Parks & Rec', text: 'Swanky, swanky.'},
+        {location: 'Small Bar', text: 'Drinky, drinky.'},
+        {location: 'Plumeria', text: 'Veggie, veggie.'},
+        {location: 'Lancers', text: 'Divey, divey.'}
+      ]}
     ]
   };
   return o;
 }]);
+
+app.controller('MainCtrl', [
+  '$scope',
+  'walks',
+  function ($scope, walks) {
+    $scope.walks = walks.walks;
+  }
+]);
 
 app.controller('MediaCtrl', [
   '$scope',
