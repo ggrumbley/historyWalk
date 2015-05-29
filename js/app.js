@@ -9,18 +9,19 @@ app.config([
     $stateProvider
       .state('home', {
         url:'/',
-        templateUrl: 'js/home/_home.html',
+        templateUrl: '_home.html',
         controller: 'MainCtrl'
       })
-      .state('accordian', {
-        url: "/accordian",
-        templateUrl: 'js/accordian/_accordian.html'
+      .state('walks', {
+        url: '/walks/{id}',
+        templateUrl: '_walks.html',
+        controller: 'WalksCtrl'
       })
       .state('mediaSelect', {
         url: "/mediaSelect",
-        templateUrl: 'js/mediaSelect/_mediaSelect.html',
+        templateUrl: '_mediaSelect.html',
         controller: 'MediaCtrl'
-      })
+      });
 }]);
 
 app.factory('walks', [function () {
@@ -33,7 +34,7 @@ app.factory('walks', [function () {
         {location: 'Kitchen', text: 'This is where Gary cooks up stuff.'},
         {location: 'Backyard', text: 'This is where Gary throws balls for his puggle overlord.'}
       ]},
-      {title: "Parl Blvd", walk: [
+      {title: "Park Blvd", walk: [
         {location: 'Twiggs Coffee', text: 'Latte, latte.'},
         {location: 'Parks & Rec', text: 'Swanky, swanky.'},
         {location: 'Small Bar', text: 'Drinky, drinky.'},
@@ -55,24 +56,37 @@ app.factory('walks', [function () {
 app.controller('MainCtrl', [
   '$scope',
   'walks',
-  function ($scope, walks) {
+  '$stateParams',
+  function ($scope, walks, $stateParams) {
     $scope.walks = walks.walks;
+    $scope.walk = walks.walks[$stateParams.id];
   }
 ]);
 
-app.controller('MediaCtrl', [
+app.controller('WalksCtrl', [
   '$scope',
+  '$stateParams',
   'walks',
-  function ($scope, walks) {
+  function ($scope, $stateParams, walks) {
+    $scope.walk = walks.walks[$stateParams.id];
     var self = this;
-    $scope.walks = walks.walks;
     self.selection = '';
+    self.selected = '';
     self.updateSelection = function(num) {
       self.selection += num;
     };
     self.reqMedia = function() {
-      console.log("You want to listen to track #" + self.selection);
-      console.log("You are in the " + $scope.walks[self.selection].title);
+      var item = parseInt(self.selection);
+      self.selected = $scope.walk.walk[item];
+      console.log("You want to listen to track #" + item);
+      console.log("You are in the " + self.selected.location);
       self.selection = '';
     };
+}]);
+app.controller('MediaCtrl', [
+  '$scope',
+  '$stateParams',
+  'walks',
+  function ($scope, $stateParams, walks) {
+
 }]);

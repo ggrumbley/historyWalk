@@ -2,5 +2,5 @@
 <h2>Please select a walk:</h2>
 
 <div ng-repeat="walk in walks">
-  <a ui-sref="mediaSelect">{{walk.title}}</a>
+  <a href="#/walks/{{$index}}">{{walk.title}}</a>
 </div>

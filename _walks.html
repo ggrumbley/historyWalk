@@ -1,4 +1,8 @@
-<div ng-controller="MediaCtrl as ctrl" class="mediaSelect">
+<h1>{{walk.title}}</h1>
+
+<div ng-controller="WalksCtrl as ctrl" class="mediaSelect">
+  You are: <h3>{{ctrl.selected.location}}</h3>
+  <h4>{{ctrl.selected.text}}</h4>
   <div class="output">
     {{ctrl.selection}}
   </div>
