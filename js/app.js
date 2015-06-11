@@ -1,4 +1,7 @@
-var app = angular.module('historyWalk', ['ui.bootstrap', 'ui.router']);
+var app = angular.module('historyWalk', [
+  'ui.bootstrap',
+  'ui.router',
+  'geolocation']);
 
 app.config([
   '$stateProvider',
@@ -21,6 +24,11 @@ app.config([
         url: "/mediaSelect",
         templateUrl: '_mediaSelect.html',
         controller: 'MediaCtrl'
+      })
+      .state('geoTest', {
+        url: "/geoTest",
+        templateUrl: '_geoTest.html',
+        controller: 'GeoTest'
       });
 }]);
 
@@ -96,3 +104,11 @@ app.controller('MediaCtrl', [
   function ($scope, $stateParams, walks) {
 
 }]);
+
+app.controller('GeoTest',
+  function ($scope, geolocation) {
+    geolocation.getLocation().then(function (data) {
+      console.log(data);
+      $scope.coords = {lat: data.coords.latitude, long: data.coords.longitude};
+    });
+});
