@@ -1,0 +1,19 @@
+{
+  "name": "historyWalk",
+  "version": "0.0.0",
+  "homepage": "https://github.com/StumblinGrumblin/historyWalk",
+  "authors": [
+    "Gary Grumbley <stumblingrumblin@gmail.com>"
+  ],
+  "description": "Open soure museum tour platform.",
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ]
+}
