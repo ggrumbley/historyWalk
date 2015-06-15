@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>History Walk</title>
   <!-- Bootstrap -->
+  <base href="/">
   <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="vendor/bootstrap-material-design/dist/css/material.min.css" rel="stylesheet">
   <link href="vendor/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
@@ -32,7 +33,7 @@
   <h2>Please select a walk:</h2>
 
   <div ng-repeat="walk in walks">
-    <a href="#/walks/{{$index}}">{{walk.title}}</a>
+    <a href="walks/{{$index}}">{{walk.title}}</a>
   </div>
 
 
