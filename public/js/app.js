@@ -1,6 +1,10 @@
+<<<<<<< HEAD:public/js/app.js
 var app = angular.module('historyWalk', [
   'ui.bootstrap',
   'ui.router']);
+=======
+var app = angular.module('historyWalk', ['ui.bootstrap', 'ui.router']);
+>>>>>>> parent of 9b1ca75... Partials added:js/app.js
 
 app.config([
   '$stateProvider',
