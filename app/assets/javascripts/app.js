@@ -1,6 +1,7 @@
 var app = angular.module('historyWalk', [
   'ui.bootstrap',
-  'ui.router']);
+  'ui.router',
+  'templates']);
 
 app.config([
   '$stateProvider',
@@ -8,24 +9,27 @@ app.config([
   '$locationProvider',
   function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-    $urlRouterProvider.otherwise("/");
-    $locationProvider.html5Mode(true);
     $stateProvider
       .state('home', {
         url:'/',
-        templateUrl: '/home.html',
+        templateUrl: 'home/_home.html',
         controller: 'MainCtrl'
       })
       .state('walks', {
         url: '/walks/{id}',
-        templateUrl: '/walks.html',
+        templateUrl: 'walks/_walks.html',
         controller: 'WalksCtrl'
       })
       .state('mediaSelect', {
-        url: "/mediaSelect",
-        templateUrl: '/mediaSelect.html',
+        url: "/_mediaSelect",
+        templateUrl: 'mediaSelect/mediaSelect.html',
         controller: 'MediaCtrl'
       });
+
+    $urlRouterProvider.otherwise("/");
+
+    $locationProvider.html5Mode(true);
+
 }]);
 
 app.factory('walks', [function () {
