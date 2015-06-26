@@ -2,13 +2,131 @@
 <html>
 <head>
   <title>HistoryWalk</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <base href="/">
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-app="historyWalk">
+  <div class="navbar navbar-default">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">historyWalk</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+          <li><a href="javascript:void(0)">Manual Selection</a></li>
+          <li><a href="javascript:void(0)">Link</a></li>
+          <li class="dropdown">
+              <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  <li><a href="javascript:void(0)">Action</a></li>
+                  <li><a href="javascript:void(0)">Another action</a></li>
+                  <li><a href="javascript:void(0)">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Dropdown header</li>
+                  <li><a href="javascript:void(0)">Separated link</a></li>
+                  <li><a href="javascript:void(0)">One more separated link</a></li>
+              </ul>
+          </li>
+      </ul>
 
-<%= yield %>
+    </div>
+</div>
 
+
+<div ui-view></div>
+
+
+  <script type="text/ng-template" id="/home.html">
+  <h4>Audio Tours</h4>
+  <div class="list-group">
+    <div class="list-group-item" ng-repeat="walk in walks">
+      <div class="row-action-primary">
+        <i class="mdi-file-folder"></i>
+      </div>
+      <div class="row-content">
+        <div class="least-content">{{walk.walk.length}} stops</div>
+        <h4 class="list-group-item-heading"><a href="walks/{{$index}}">{{walk.title}}</a></h4>
+        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="footer">
+     <a ui-sref="geoTest">Geo Location Test</a>
+   </div> -->
+
+  </script>
+  <script type="text/ng-template" id="/mediaSelect.html">
+  <div ng-controller="MediaCtrl as ctrl" class="mediaSelect">
+    <h2></h2>
+    <div class="output">
+      {{ctrl.selection}}
+    </div>
+    <div class="keyPad">
+      <button class="inputBtn" name="btn0" value="0" ng-click="ctrl.updateSelection(0)">0</button>
+      <button class="inputBtn" name="btn1" value="1" ng-click="ctrl.updateSelection(1)">1</button>
+      <button class="inputBtn" name="btn2" value="2" ng-click="ctrl.updateSelection(2)">2</button>
+      <button class="inputBtn" name="btn3" value="3" ng-click="ctrl.updateSelection(3)">3</button>
+      <button class="inputBtn" name="btn4" value="4" ng-click="ctrl.updateSelection(4)">4</button>
+      <button class="inputBtn" name="btn5" value="5" ng-click="ctrl.updateSelection(5)">5</button>
+      <button class="inputBtn" name="btn6" value="6" ng-click="ctrl.updateSelection(6)">6</button>
+      <button class="inputBtn" name="btn7" value="7" ng-click="ctrl.updateSelection(7)">7</button>
+      <button class="inputBtn" name="btn8" value="8" ng-click="ctrl.updateSelection(8)">8</button>
+      <button class="inputBtn" name="btn9" value="9" ng-click="ctrl.updateSelection(9)">9</button>
+
+      <button class="inputBtn" name="playPause" ng-click="ctrl.reqMedia()">&#10073;&#10073; / &#9658;</button>
+    </div>
+  </div>
+
+  </script>
+
+  <script type="text/ng-template" id="/walks.html">
+  <div class="container">
+
+    <h2>{{walk.title}}</h2>
+
+    <div ng-controller="WalksCtrl as ctrl" class="mediaSelect">
+      <p class="text-warning">{{ctrl.error}}</p>
+      <h3>{{ctrl.selected.location}}</h3>
+      <h4>{{ctrl.selected.text}}</h4>
+      <div class="output">
+        {{ctrl.selection}}
+      </div>
+      <div class="keyPad">
+        <button class="btn btn-info" name="btn0" value="0" ng-click="ctrl.updateSelection(0)">0</button>
+        <button class="btn btn-info" name="btn1" value="1" ng-click="ctrl.updateSelection(1)">1</button>
+        <button class="btn btn-info" name="btn2" value="2" ng-click="ctrl.updateSelection(2)">2</button>
+        <button class="btn btn-info" name="btn3" value="3" ng-click="ctrl.updateSelection(3)">3</button>
+        <button class="btn btn-info" name="btn4" value="4" ng-click="ctrl.updateSelection(4)">4</button>
+        <button class="btn btn-info" name="btn5" value="5" ng-click="ctrl.updateSelection(5)">5</button>
+        <button class="btn btn-info" name="btn6" value="6" ng-click="ctrl.updateSelection(6)">6</button>
+        <button class="btn btn-info" name="btn7" value="7" ng-click="ctrl.updateSelection(7)">7</button>
+        <button class="btn btn-info" name="btn8" value="8" ng-click="ctrl.updateSelection(8)">8</button>
+        <button class="btn btn-info" name="btn9" value="9" ng-click="ctrl.updateSelection(9)">9</button>
+
+        <button class="btn btn-success" name="playPause" ng-click="ctrl.reqMedia()">&#9658;</button>
+      </div>
+    </div>
+  </div>
+
+  </script>
+
+  <!-- Application Dependencies
+  <script type="text/javascript" src="vendor/angular/angular.js"></script>
+  <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+  <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap.js"></script>
+  <script type="text/javascript" src="vendor/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="vendor/bootstrap-material-design/dist/js/ripples.min.js"></script>
+  <script src="vendor/bootstrap-material-design/dist/js/material.min.js"></script>
+
+  <script type="text/javascript" src="js/app.js"></script> -->
 </body>
 </html>
