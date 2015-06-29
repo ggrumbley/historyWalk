@@ -1,9 +1,9 @@
-//= require angular/angular
-//= require angular-ui-router/release/angular-ui-router
+//= require angular
 //= require angular-bootstrap/ui-bootstrap
-//= require angular-rails-templates
 //= require jquery/dist/jquery
 //= require bootstrap/dist/js/bootstrap
 //= require bootstrap-material-design/dist/js/material.js
 //= require bootstrap-material-design/dist/js/ripples.js
+//= require angular-ui-router
+//= require angular-rails-templates
 //= require_tree .

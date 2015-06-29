@@ -1,9 +1,9 @@
 # A sample Bowerfile
 # Check out https://github.com/42dev/bower-rails#ruby-dsl-configuration for more options
 
-asset 'bootstrap'
+asset 'bootstrap', '~3.3.2'
 asset 'bootstrap-material-design'
 asset 'jquery'
-asset 'angular'
+asset 'angular', '~1.3.14'
 asset 'angular-bootstrap'
-asset 'angular-ui-router'
+asset 'angular-ui-router', '~0.2.13'

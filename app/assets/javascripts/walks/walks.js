@@ -1,38 +1,5 @@
-var app = angular.module('historyWalk', [
-  'ui.bootstrap',
-  'ui.router',
-  'templates']);
-
-app.config([
-  '$stateProvider',
-  '$urlRouterProvider',
-  '$locationProvider',
-  function ($stateProvider, $urlRouterProvider, $locationProvider) {
-
-    $stateProvider
-      .state('home', {
-        url:'/',
-        templateUrl: 'home/_home.html',
-        controller: 'MainCtrl'
-      })
-      .state('walks', {
-        url: '/walks/{id}',
-        templateUrl: 'walks/_walks.html',
-        controller: 'WalksCtrl'
-      })
-      .state('mediaSelect', {
-        url: "/_mediaSelect",
-        templateUrl: 'mediaSelect/mediaSelect.html',
-        controller: 'MediaCtrl'
-      });
-
-    $urlRouterProvider.otherwise("/");
-
-    $locationProvider.html5Mode(true);
-
-}]);
-
-app.factory('walks', [function () {
+angular.module('historyWalk')
+.factory('walks', [function () {
   var o = {
     walks: [
       {title: "The Internet Meme Collection", walk: [
@@ -70,48 +37,4 @@ app.factory('walks', [function () {
     ]
   };
   return o;
-}]);
-
-app.controller('MainCtrl', [
-  '$scope',
-  'walks',
-  '$stateParams',
-  function ($scope, walks, $stateParams) {
-    $scope.walks = walks.walks;
-    $scope.walk = walks.walks[$stateParams.id];
-  }
-]);
-
-app.controller('WalksCtrl', [
-  '$scope',
-  '$stateParams',
-  'walks',
-  function ($scope, $stateParams, walks) {
-    $scope.walk = walks.walks[$stateParams.id];
-    var self = this;
-    self.selection = '';
-    self.updateSelection = function(num) {
-      self.selection += num;
-    };
-    self.reqMedia = function() {
-      var item = parseInt(self.selection),
-          walkLength = $scope.walk.walk.length;
-      if (parseInt(self.selection) >= walkLength) {
-        self.error = "Please make a selection less than " + walkLength;
-        self.selection = '';
-        self.selected = '';
-      } else {
-        self.error = '';
-        self.selected = $scope.walk.walk[item];
-        self.selection = '';
-      }
-
-    };
-}]);
-app.controller('MediaCtrl', [
-  '$scope',
-  '$stateParams',
-  'walks',
-  function ($scope, $stateParams, walks) {
-
 }]);
