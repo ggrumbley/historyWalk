@@ -1,0 +1,13 @@
+<h4>Audio Tours</h4>
+<div class="list-group">
+  <div class="list-group-item" ng-repeat="walk in walks">
+    <div class="row-action-primary">
+      <img src="{{walk.cover}}" >
+    </div>
+    <div class="row-content">
+      <div class="least-content">{{walk.walk.length}} stops</div>
+      <h4 class="list-group-item-heading"><a href="walks/{{$index}}">{{walk.title}}</a></h4>
+      <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+    </div>
+  </div>
+</div>
