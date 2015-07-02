@@ -10,7 +10,7 @@ This is a history app that will serve as a platform for guided tours and multime
 + Material Design for Bootstrap
 
 ## TODO
-+ [ ] Push app to Heroku
++ [x] Push app to Heroku
 + [ ] Add images to walks
   + [ ] Set one image from walk to cover image
 + [ ] Build tour page of tiles  

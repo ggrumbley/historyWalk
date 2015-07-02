@@ -1,0 +1,103 @@
+angular.module('historyWalk')
+  .factory('walks', [function () {
+    var o = {
+      walks: [
+        {
+          title: "The Internet Meme Collection",
+          cover: "<%= asset_path('ducreux1.jpg') %>",
+          walk: [
+            {
+              exhibit: 'Joseph Ducreux',
+              text: 'A portrait from 1793 remixed with archaic rap lyrics. What\'s not to love?',
+              image: "<%= asset_path('ducreux1.jpg') %>"
+            },
+            {
+              exhibit: 'Charlie the Unicorn',
+              text: 'In this odd flash animation the user is treated to a hilarious romp as Charlie the Unicorn goes in search of Candy Mountain.',
+              image: "<%= asset_path('charlie.jpg') %>"
+            },
+            {
+              exhibit: 'I Took an Arrow in the Knee',
+              text: 'Adventuring is dangerous, some people have to hang it up after a simple arrow to the knee.',
+              image: "<%= asset_path('arrowToKnee.jpg') %>"
+            },
+            {
+              exhibit: 'Grape Stomp Lady',
+              text: 'The first work hailing from poorly produced TV. This unfortunate lady eats it.',
+              image: "<%= asset_path('grapeLady.jpg') %>"
+            },
+            {
+              exhibit: 'Star Wars Kid',
+              text: 'This Canadian kid has mad skills.',
+              image: "<%= asset_path('swKid.jpg') %>"
+            },
+            {
+              exhibit: 'Numa Numa',
+              text: 'Words fail me.',
+              image: "<%= asset_path('numa.jpg') %>"
+            },
+            {
+              exhibit: 'Leeroy Jenkins',
+              text: 'Leeroy Jenkins makes enemies in the World... of Warcraft.',
+              image: "<%= asset_path('leeroy.jpg') %>"
+            },
+            {
+              exhibit: 'Double Rainbow',
+              text: 'All the way across the sky! I am so high right now.',
+              image: "<%= asset_path('rainbow.jpg') %>"
+            },
+            {
+              exhibit: 'Peanut Butter Jelly Time',
+              text: 'I am a ba na na!',
+              image: "<%= asset_path('pbjt.jpg') %>"
+            }
+          ]
+        },
+        {
+          title: "Gary's House",
+          cover: "<%= asset_path('garyHome.jpg') %>",
+          walk: [
+            {exhibit: 'Computer Room', text: 'This is where Gary Hacks on things.'},
+            {exhibit: 'Bedroom', text: 'This is where Gary sleeps.'},
+            {exhibit: 'Living Room', text: 'This is where Gary kicks it with Pippa and peeps.'},
+            {exhibit: 'Kitchen', text: 'This is where Gary cooks up stuff.'},
+            {exhibit: 'Backyard', text: 'This is where Gary throws balls for his puggle overlord.'}
+          ]
+        },
+        {
+          title: "Cuyamaca Rancho State Park",
+          cover: "<%= asset_path('stonewallPeak.jpg') %>",
+          walk: [
+            {exhibit: 'Twiggs Coffee', text: 'Latte, latte.'},
+            {exhibit: 'Parks & Rec', text: 'Swanky, swanky.'},
+            {exhibit: 'Small Bar', text: 'Drinky, drinky.'},
+            {exhibit: 'Plumeria', text: 'Veggie, veggie.'},
+            {exhibit: 'Lancers', text: 'Divey, divey.'}
+          ]
+        },
+        {
+          title: "Balboa Park",
+          cover: "<%= asset_path('balboa.jpg') %>",
+          walk: [
+            {exhibit: 'Twiggs Coffee', text: 'Latte, latte.'},
+            {exhibit: 'Parks & Rec', text: 'Swanky, swanky.'},
+            {exhibit: 'Small Bar', text: 'Drinky, drinky.'},
+            {exhibit: 'Plumeria', text: 'Veggie, veggie.'},
+            {exhibit: 'Lancers', text: 'Divey, divey.'}
+          ]
+        },
+        {
+          title: "Park Blvd",
+          cover: "<%= asset_path('parkBLVD.jpg') %>",
+          walk: [
+          {exhibit: 'Twiggs Coffee', text: 'Latte, latte.'},
+          {exhibit: 'Parks & Rec', text: 'Swanky, swanky.'},
+          {exhibit: 'Small Bar', text: 'Drinky, drinky.'},
+          {exhibit: 'Plumeria', text: 'Veggie, veggie.'},
+          {exhibit: 'Lancers', text: 'Divey, divey.'}
+          ]
+        }
+      ]
+    };
+    return o;
+  }]);
