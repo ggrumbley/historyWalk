@@ -25,3 +25,10 @@ body {
 a.thumbnail:hover {
   text-decoration: none;
 }
+.homeTours h4 {
+  margin: 0;
+}
+
+.exhibits h5 {
+  margin: 0;
+}

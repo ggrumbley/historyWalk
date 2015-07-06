@@ -1,11 +1,14 @@
 <h2>{{walk.title}}</h2>
 <div ng-repeat="tour in tours">
-  <div class="col-xs-6 col-md-3">
+<div class="col-xs-6 col-md-3 exhibits">
     <a href="#" class="thumbnail">
       <img ng-src={{tour.image}} alt="{{tour.exhibit}}" >
       <div class="caption">
-        <h4>{{tour.exhibit}}</h4>
-        <p>{{tour.text}}</p>
+        <h5>
+          <b>{{tour.stop}}</b> | {{tour.artist}}. <br />
+          <em>{{tour.exhibit}}</em>. {{tour.year}}
+        </h5>
+
       </div>
     </a>
   </div>

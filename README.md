@@ -15,9 +15,9 @@ This is a history app that will serve as a platform for guided tours and multime
   + [x] Set one image from walk to cover image
 + [x] Fix route handling on manual page load
 + [x] Build tour page of tiles  
-  + [ ] Add artist field
-  + [ ] Add Year field
-  + [ ] Add Ex number to each exhibit
+  + [x] Add artist field
+  + [x] Add Year field
+  + [x] Add Ex number to each exhibit
 + [ ] Build individual Exhibit page
   + [ ] Add Audio Stream from Soundcloud
   + [ ] Research Videogular - Angular Media Player
