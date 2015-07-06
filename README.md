@@ -11,9 +11,10 @@ This is a history app that will serve as a platform for guided tours and multime
 
 ## TODO
 + [x] Push app to Heroku
-+ [ ] Add images to walks
-  + [ ] Set one image from walk to cover image
-+ [ ] Build tour page of tiles  
++ [x] Add images to walks
+  + [x] Set one image from walk to cover image
++ [x] Fix route handling on manual page load
++ [x] Build tour page of tiles  
   + [ ] Add artist field
   + [ ] Add Year field
   + [ ] Add Ex number to each exhibit

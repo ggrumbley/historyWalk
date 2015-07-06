@@ -3,7 +3,6 @@
 
 asset 'bootstrap', '~3.3.2'
 asset 'bootstrap-material-design'
-asset 'jquery'
 asset 'angular', '~1.3.14'
 asset 'angular-bootstrap'
 asset 'angular-ui-router', '~0.2.13'

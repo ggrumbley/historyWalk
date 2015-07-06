@@ -7,5 +7,5 @@ angular.module('historyWalk')
       $scope.walk = walks.walks[$stateParams.id];
       $scope.tours = walks.walks[$stateParams.id].walk;
       var self = this;
-      console.log($scope.tour);
+      
   }]);

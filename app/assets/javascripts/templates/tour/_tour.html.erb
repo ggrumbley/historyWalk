@@ -2,7 +2,7 @@
 <div ng-repeat="tour in tours">
   <div class="col-xs-6 col-md-3">
     <a href="#" class="thumbnail">
-      <img src="{{tour.image}}" alt="{{tour.exhibit}}" >
+      <img ng-src={{tour.image}} alt="{{tour.exhibit}}" >
       <div class="caption">
         <h4>{{tour.exhibit}}</h4>
         <p>{{tour.text}}</p>
