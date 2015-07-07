@@ -11,8 +11,13 @@
     ]);
 
   function TourCtrl($scope, $stateParams, walks) {
-    $scope.walk = walks.walks[$stateParams.id];
-    $scope.tours = walks.walks[$stateParams.id].walk;
+    var walk = walks.tours[$stateParams.tourID],
+        tours = walk.exhibits,
+        tourID = $stateParams.tourID;
+
+    $scope.walk = walk;
+    $scope.tours = tours;
+    $scope.tourID = tourID;
     var self = this;
   };
 

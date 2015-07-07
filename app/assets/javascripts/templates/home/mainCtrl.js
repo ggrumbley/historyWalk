@@ -9,10 +9,10 @@
       '$stateParams',
       MainCtrl
     ]);
-    
+
   function MainCtrl($scope, walks, $stateParams) {
-    $scope.walks = walks.walks;
-    $scope.walk = walks.walks[$stateParams.id];
+    $scope.tours = walks.tours;
+    $scope.walk = walks.tours[$stateParams.tourID];
   };
 
 })();

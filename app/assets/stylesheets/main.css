@@ -32,3 +32,10 @@ a.thumbnail:hover {
 .exhibits h5 {
   margin: 0;
 }
+img {
+  width: 100%;
+  height:auto;
+}
+div.exDisc {
+  margin-top: 20px;
+}

@@ -9,6 +9,7 @@
       '$locationProvider',
       Router
     ]);
+
   function Router($stateProvider, $urlRouterProvider, $locationProvider) {
 
     $stateProvider
@@ -18,17 +19,16 @@
         controller: 'MainCtrl'
       })
       .state('tour', {
-        url: '/tours/{id}',
+        url: '/tour/{tourID}',
         templateUrl: 'tour/_tour.html',
         controller: 'TourCtrl'
       })
       .state('exhibit', {
-        url: '/tours/{id}/exhibit/{exNum}',
-        template: '<h1>Your selection</h1>'
-        // templateUrl: 'mediaSelect/_mediaSelect.html',
-        // controller: 'ExCtrl'
+        url: '/tour/{tourID}/exhibit/{exID}',
+        templateUrl: 'exhibit/_exhibit.html',
+        controller: 'ExCtrl'
       });
-    $urlRouterProvider.otherwise("home");
+    $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(true);
   };
 
