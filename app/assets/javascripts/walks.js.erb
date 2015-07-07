@@ -1,130 +1,136 @@
-angular.module('historyWalk')
-  .factory('walks', [function () {
-    var o = {
-      walks: [
-        {
-          title: "The Internet Meme Collection",
-          cover: "<%= asset_path('ducreux1.jpg') %>",
-          walk: [
-            {
-              stop: 101,
-              artist: "Anonymous",
-              exhibit: 'Joseph Ducreux',
-              year: 2009,
-              text: 'A portrait from 1793 remixed with archaic rap lyrics. What\'s not to love?',
-              image: "<%= asset_path('ducreux1.jpg') %>"
-            },
-            {
-              stop: 102,
-              artist: "Jason Steele",
-              exhibit: 'Charlie the Unicorn',
-              year: 2005,
-              text: 'In this odd flash animation the user is treated to a hilarious romp as Charlie the Unicorn goes in search of Candy Mountain.',
-              image: "<%= asset_path('charlie.jpg') %>"
-            },
-            {
-              stop: 103,
-              artist: "Anonymous",
-              exhibit: 'I Took an Arrow in the Knee',
-              year: 2011,
-              text: 'Adventuring is dangerous, some people have to hang it up after a simple arrow to the knee.',
-              image: "<%= asset_path('arrowToKnee.jpg') %>"
-            },
-            {
-              stop: 104,
-              artist: "Melissa Sander",
-              exhibit: 'Grape Stomp Lady',
-              year: 1998,
-              text: 'The first work hailing from poorly produced TV. This unfortunate lady eats it.',
-              image: "<%= asset_path('grapeLady.jpg') %>"
-            },
-            {
-              stop: 105,
-              artist: "Ghyslain Raza",
-              exhibit: 'Star Wars Kid',
-              year: 2002,
-              text: 'This Canadian kid has mad skills.',
-              image: "<%= asset_path('swKid.jpg') %>"
-            },
-            {
-              stop: 106,
-              artist: "Gary Brolsma",
-              exhibit: 'Numa Numa',
-              year: 2004,
-              text: 'Words fail me.',
-              image: "<%= asset_path('numa.jpg') %>"
-            },
-            {
-              stop: 107,
-              artist: "Anonymous",
-              exhibit: 'Ben Schulz',
-              year: 2005,
-              text: 'Leeroy Jenkins makes enemies in the World... of Warcraft.',
-              image: "<%= asset_path('leeroy.jpg') %>"
-            },
-            {
-              stop: 108,
-              artist: "Hungrybear9562",
-              exhibit: 'Double Rainbow',
-              year: 2010,
-              text: 'All the way across the sky! I am so high right now.',
-              image: "<%= asset_path('rainbow.jpg') %>"
-            },
-            {
-              stop: 109,
-              artist: "The Buckwheat Boyz",
-              exhibit: 'Peanut Butter Jelly Time',
-              year: 2002,
-              text: 'I am a ba na na!',
-              image: "<%= asset_path('pbjt.jpg') %>"
-            }
-          ]
-        },
-        {
-          title: "Gary's House",
-          cover: "<%= asset_path('garyHome.jpg') %>",
-          walk: [
-            {exhibit: 'Computer Room', text: 'This is where Gary Hacks on things.'},
-            {exhibit: 'Bedroom', text: 'This is where Gary sleeps.'},
-            {exhibit: 'Living Room', text: 'This is where Gary kicks it with Pippa and peeps.'},
-            {exhibit: 'Kitchen', text: 'This is where Gary cooks up stuff.'},
-            {exhibit: 'Backyard', text: 'This is where Gary throws balls for his puggle overlord.'}
-          ]
-        },
-        {
-          title: "Cuyamaca Rancho State Park",
-          cover: "<%= asset_path('stonewallPeak.jpg') %>",
-          walk: [
+(function() {
+  "use strict";
+
+  angular
+    .module('historyWalk')
+    .factory('walks', [function () {
+      var o = {
+        walks: [
+          {
+            title: "The Internet Meme Collection",
+            cover: "<%= asset_path('ducreux1.jpg') %>",
+            walk: [
+              {
+                stop: 101,
+                artist: "Anonymous",
+                exhibit: 'Joseph Ducreux',
+                year: 2009,
+                text: 'A portrait from 1793 remixed with archaic rap lyrics. What\'s not to love?',
+                image: "<%= asset_path('ducreux1.jpg') %>"
+              },
+              {
+                stop: 102,
+                artist: "Jason Steele",
+                exhibit: 'Charlie the Unicorn',
+                year: 2005,
+                text: 'In this odd flash animation the user is treated to a hilarious romp as Charlie the Unicorn goes in search of Candy Mountain.',
+                image: "<%= asset_path('charlie.jpg') %>"
+              },
+              {
+                stop: 103,
+                artist: "Anonymous",
+                exhibit: 'I Took an Arrow in the Knee',
+                year: 2011,
+                text: 'Adventuring is dangerous, some people have to hang it up after a simple arrow to the knee.',
+                image: "<%= asset_path('arrowToKnee.jpg') %>"
+              },
+              {
+                stop: 104,
+                artist: "Melissa Sander",
+                exhibit: 'Grape Stomp Lady',
+                year: 1998,
+                text: 'The first work hailing from poorly produced TV. This unfortunate lady eats it.',
+                image: "<%= asset_path('grapeLady.jpg') %>"
+              },
+              {
+                stop: 105,
+                artist: "Ghyslain Raza",
+                exhibit: 'Star Wars Kid',
+                year: 2002,
+                text: 'This Canadian kid has mad skills.',
+                image: "<%= asset_path('swKid.jpg') %>"
+              },
+              {
+                stop: 106,
+                artist: "Gary Brolsma",
+                exhibit: 'Numa Numa',
+                year: 2004,
+                text: 'Words fail me.',
+                image: "<%= asset_path('numa.jpg') %>"
+              },
+              {
+                stop: 107,
+                artist: "Anonymous",
+                exhibit: 'Ben Schulz',
+                year: 2005,
+                text: 'Leeroy Jenkins makes enemies in the World... of Warcraft.',
+                image: "<%= asset_path('leeroy.jpg') %>"
+              },
+              {
+                stop: 108,
+                artist: "Hungrybear9562",
+                exhibit: 'Double Rainbow',
+                year: 2010,
+                text: 'All the way across the sky! I am so high right now.',
+                image: "<%= asset_path('rainbow.jpg') %>"
+              },
+              {
+                stop: 109,
+                artist: "The Buckwheat Boyz",
+                exhibit: 'Peanut Butter Jelly Time',
+                year: 2002,
+                text: 'I am a ba na na!',
+                image: "<%= asset_path('pbjt.jpg') %>"
+              }
+            ]
+          },
+          {
+            title: "Gary's House",
+            cover: "<%= asset_path('garyHome.jpg') %>",
+            walk: [
+              {exhibit: 'Computer Room', text: 'This is where Gary Hacks on things.'},
+              {exhibit: 'Bedroom', text: 'This is where Gary sleeps.'},
+              {exhibit: 'Living Room', text: 'This is where Gary kicks it with Pippa and peeps.'},
+              {exhibit: 'Kitchen', text: 'This is where Gary cooks up stuff.'},
+              {exhibit: 'Backyard', text: 'This is where Gary throws balls for his puggle overlord.'}
+            ]
+          },
+          {
+            title: "Cuyamaca Rancho State Park",
+            cover: "<%= asset_path('stonewallPeak.jpg') %>",
+            walk: [
+              {exhibit: 'Twiggs Coffee', text: 'Latte, latte.'},
+              {exhibit: 'Parks & Rec', text: 'Swanky, swanky.'},
+              {exhibit: 'Small Bar', text: 'Drinky, drinky.'},
+              {exhibit: 'Plumeria', text: 'Veggie, veggie.'},
+              {exhibit: 'Lancers', text: 'Divey, divey.'}
+            ]
+          },
+          {
+            title: "Balboa Park",
+            cover: "<%= asset_path('balboa.jpg') %>",
+            walk: [
+              {exhibit: 'Twiggs Coffee', text: 'Latte, latte.'},
+              {exhibit: 'Parks & Rec', text: 'Swanky, swanky.'},
+              {exhibit: 'Small Bar', text: 'Drinky, drinky.'},
+              {exhibit: 'Plumeria', text: 'Veggie, veggie.'},
+              {exhibit: 'Lancers', text: 'Divey, divey.'}
+            ]
+          },
+          {
+            title: "Park Blvd",
+            cover: "<%= asset_path('parkBLVD.jpg') %>",
+            walk: [
             {exhibit: 'Twiggs Coffee', text: 'Latte, latte.'},
             {exhibit: 'Parks & Rec', text: 'Swanky, swanky.'},
             {exhibit: 'Small Bar', text: 'Drinky, drinky.'},
             {exhibit: 'Plumeria', text: 'Veggie, veggie.'},
             {exhibit: 'Lancers', text: 'Divey, divey.'}
-          ]
-        },
-        {
-          title: "Balboa Park",
-          cover: "<%= asset_path('balboa.jpg') %>",
-          walk: [
-            {exhibit: 'Twiggs Coffee', text: 'Latte, latte.'},
-            {exhibit: 'Parks & Rec', text: 'Swanky, swanky.'},
-            {exhibit: 'Small Bar', text: 'Drinky, drinky.'},
-            {exhibit: 'Plumeria', text: 'Veggie, veggie.'},
-            {exhibit: 'Lancers', text: 'Divey, divey.'}
-          ]
-        },
-        {
-          title: "Park Blvd",
-          cover: "<%= asset_path('parkBLVD.jpg') %>",
-          walk: [
-          {exhibit: 'Twiggs Coffee', text: 'Latte, latte.'},
-          {exhibit: 'Parks & Rec', text: 'Swanky, swanky.'},
-          {exhibit: 'Small Bar', text: 'Drinky, drinky.'},
-          {exhibit: 'Plumeria', text: 'Veggie, veggie.'},
-          {exhibit: 'Lancers', text: 'Divey, divey.'}
-          ]
-        }
-      ]
-    };
-    return o;
-  }]);
+            ]
+          }
+        ]
+      };
+      return o;
+    }]);
+
+})();
