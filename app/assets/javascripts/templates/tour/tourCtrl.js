@@ -7,11 +7,13 @@
       '$scope',
       '$stateParams',
       'walks',
-      function ($scope, $stateParams, walks) {
-        $scope.walk = walks.walks[$stateParams.id];
-        $scope.tours = walks.walks[$stateParams.id].walk;
-        var self = this;
+      TourCtrl
+    ]);
 
-    }]);
+  function TourCtrl($scope, $stateParams, walks) {
+    $scope.walk = walks.walks[$stateParams.id];
+    $scope.tours = walks.walks[$stateParams.id].walk;
+    var self = this;
+  };
 
 })();

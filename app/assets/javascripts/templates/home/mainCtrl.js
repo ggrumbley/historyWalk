@@ -7,9 +7,12 @@
       '$scope',
       'walks',
       '$stateParams',
-      function ($scope, walks, $stateParams) {
-        $scope.walks = walks.walks;
-        $scope.walk = walks.walks[$stateParams.id];
-    }]);
+      MainCtrl
+    ]);
+    
+  function MainCtrl($scope, walks, $stateParams) {
+    $scope.walks = walks.walks;
+    $scope.walk = walks.walks[$stateParams.id];
+  };
 
 })();
