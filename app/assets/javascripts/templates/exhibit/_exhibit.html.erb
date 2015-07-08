@@ -8,21 +8,26 @@
       {{exhibit.title}}
     </div>
   </div>
-</div>
-<div ng-controller="ExCtrl as ctrl" class="videogular-container">
-  <videogular vm-theme="ctrl.config.theme.url" class="videogular-container audio">
-    <vg-media vg-src="ctrl.config.sources" vg-type="audio"></vg-media>
 
-    <vg-controls>
-      <vg-play-pause-button></vg-play-pause-button>
-      <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
-      <vg-scrub-bar>
-        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-      </vg-scrub-bar>
-      <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
-      <vg-volume>
-        <vg-mute-button></vg-mute-button>
-      </vg-volume>
-    </vg-controls>
-  </videogular>
+
+
+    <div plangular="http://soundcloud.com/majorlazer/{{exhibit.audio}}"
+      class="audioPlayer">
+
+        <button class="playBtn" ng-click="playPause()" >
+          <i ng-if="player.playing !== track.src" class="mdi-av-play-arrow mdi-material-teal"></i>
+          <i ng-if="player.playing === track.src" class="mdi-av-pause mdi-material-teal"></i>
+        </button>
+        <div class="data pull-right">
+          <samp class="pull-left">{{ currentTime | hhmmss }}</samp>
+          <progress
+            class="pull-right"
+            ng-click="seek($event)"
+            ng-value="currentTime / duration">
+            {{ currentTime / duration }}
+          </progress>
+        </div>
+
+      </div>
+
 </div>

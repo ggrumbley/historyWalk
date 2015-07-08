@@ -42,50 +42,30 @@ div.exDisc {
   margin-top: 20px;
 }
 
-
-
-
-.videogular-container.audio {
-    width: 100%;
-    margin: auto;
-    height: 50px;
-    position: fixed;
-    bottom: 0;
-    background: #eeeeee;
+.audioPlayer {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
 }
 
-@media (min-width: 1200px) {
-    .videogular-container {
-        width: 1170px;
-        height: 658.125px;
-    }
-
-    .videogular-container.audio {
-        width: 1170px;
-        height: 50px;
-    }
+.playBtn i {
+  font-size: 40pt;
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-    .videogular-container {
-        width: 940px;
-        height: 528.75px;
-    }
-
-    .videogular-container.audio {
-        width: 940px;
-        height: 50px;
-    }
+.playBtn {
+  background-color: inherit;
+  border: 0;
 }
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .videogular-container {
-        width: 728px;
-        height: 409.5px;
-    }
-
-    .videogular-container.audio {
-        width: 728px;
-        height: 50px;
-    }
+.data {
+  display: inline-block;
+  width:75%;
+  margin-right:20px;
+  margin-top: 22px;
+}
+progress {
+  width: 80%
+}
+.teal {
+  color: red;
 }

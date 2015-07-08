@@ -6,8 +6,6 @@
 //= require bootstrap-material-design/dist/js/ripples.js
 //= require angular-ui-router
 //= require angular-rails-templates
-//= require angular-sanitize
-//= require videogular
-//= require videogular-controls/vg-controls
+//= require plangular/dist/plangular.min.js
 //= require_tree .
 //= require_tree ./templates

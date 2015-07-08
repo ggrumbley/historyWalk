@@ -5,20 +5,18 @@
     .module('historyWalk',
       [
         'ui.router',
-        'ui.bootstrap',
         'templates',
-        'ngSanitize',
-        'com.2fdevs.videogular',
-        'com.2fdevs.videogular.plugins.controls'
+        'plangular'
       ])
     .config([
       '$stateProvider',
       '$urlRouterProvider',
       '$locationProvider',
+      'plangularConfigProvider',
       Router
     ]);
 
-  function Router($stateProvider, $urlRouterProvider, $locationProvider) {
+  function Router($stateProvider, $urlRouterProvider, $locationProvider, plangularConfigProvider) {
 
     $stateProvider
       .state('home', {
@@ -35,14 +33,10 @@
         url: '/tour/{tourID}/exhibit/{exID}',
         templateUrl: 'exhibit/_exhibit.html',
         controller: 'ExCtrl'
-      })
-      .state('audioTest', {
-        url: '/audio',
-        templateUrl: 'audio/_audio.html',
-        controller: 'AudioCtrl'
       });
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(true);
+    plangularConfigProvider.clientId = '9b3a578e8c2b9a25ede5ddf066cb82fe';
   };
 
 })();
