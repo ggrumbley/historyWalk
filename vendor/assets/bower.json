@@ -8,6 +8,7 @@
     "angular-ui-router": "latest",
     "angular-sanitize": "latest",
     "videogular": "latest",
-    "videogular-controls": "latest"
+    "videogular-controls": "latest",
+    "videogular-themes-default": "latest"
   }
 }

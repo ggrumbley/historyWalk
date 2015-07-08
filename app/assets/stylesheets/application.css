@@ -14,6 +14,7 @@
  *= require bootstrap-material-design/dist/css/material.css
  *= require bootstrap-material-design/dist/css/ripples.css
  *= require bootstrap-material-design/dist/css/roboto.css
+ *= require videogular-themes-default/videogular.css
  *= require_tree .
  *= require_self
  */
