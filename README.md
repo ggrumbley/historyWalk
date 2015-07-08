@@ -18,7 +18,7 @@ This is a history app that will serve as a platform for guided tours and multime
   + [x] Add artist field
   + [x] Add Year field
   + [x] Add Ex number to each exhibit
-+ [ ] Build individual Exhibit page
++ [x] Build individual Exhibit page
   + [ ] Add Audio Stream from Soundcloud
   + [ ] Research Videogular - Angular Media Player
 

@@ -6,5 +6,11 @@
 //= require bootstrap-material-design/dist/js/ripples.js
 //= require angular-ui-router
 //= require angular-rails-templates
+//= require angular-sanitize
+//= require videogular
+//= require videogular-controls/vg-controls
+//= require videogular-overlay-play/vg-overlay-play
+//= require videogular-poster/vg-poster
+//= require videogular-buffering/vg-buffering
 //= require_tree .
 //= require_tree ./templates
