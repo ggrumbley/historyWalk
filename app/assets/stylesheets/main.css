@@ -1,7 +1,9 @@
-body {
-  height: 100%;
-  width: 100%;
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
+
 .output {
   background: black;
   color: lime;
@@ -38,4 +40,52 @@ img {
 }
 div.exDisc {
   margin-top: 20px;
+}
+
+
+
+
+.videogular-container.audio {
+    width: 100%;
+    margin: auto;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    background: #eeeeee;
+}
+
+@media (min-width: 1200px) {
+    .videogular-container {
+        width: 1170px;
+        height: 658.125px;
+    }
+
+    .videogular-container.audio {
+        width: 1170px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .videogular-container {
+        width: 940px;
+        height: 528.75px;
+    }
+
+    .videogular-container.audio {
+        width: 940px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .videogular-container {
+        width: 728px;
+        height: 409.5px;
+    }
+
+    .videogular-container.audio {
+        width: 728px;
+        height: 50px;
+    }
 }
