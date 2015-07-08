@@ -1,19 +1,13 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-    "bootstrap": "latest",
+    "bootstrap-sass-official": "latest",
     "bootstrap-material-design": "latest",
     "angular": "latest",
     "angular-bootstrap": "latest",
     "angular-ui-router": "latest",
+    "angular-sanitize": "latest",
     "videogular": "latest",
-    "videogular-themes-default": "latest",
-    "videogular-controls": "latest",
-    "videogular-buffering": "latest",
-    "videogular-overlay-play": "latest",
-    "videogular-poster": "latest",
-    "videogular-ima-ads": "latest",
-    "videogular-angulartics": "latest",
-    "angular-sanitize": "latest"
+    "videogular-controls": "latest"
   }
 }

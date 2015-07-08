@@ -6,13 +6,11 @@
     .controller('MainCtrl', [
       '$scope',
       'walks',
-      '$stateParams',
       MainCtrl
     ]);
 
-  function MainCtrl($scope, walks, $stateParams) {
+  function MainCtrl($scope, walks) {
     $scope.tours = walks.tours;
-    $scope.walk = walks.tours[$stateParams.tourID];
   };
 
 })();

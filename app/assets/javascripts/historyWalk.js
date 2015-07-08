@@ -2,7 +2,15 @@
   "use strict";
 
   angular
-    .module('historyWalk', ['ui.router', 'templates'])
+    .module('historyWalk',
+      [
+        'ui.router',
+        'ui.bootstrap',
+        'templates',
+        'ngSanitize',
+        'com.2fdevs.videogular',
+        'com.2fdevs.videogular.plugins.controls'
+      ])
     .config([
       '$stateProvider',
       '$urlRouterProvider',
@@ -27,6 +35,11 @@
         url: '/tour/{tourID}/exhibit/{exID}',
         templateUrl: 'exhibit/_exhibit.html',
         controller: 'ExCtrl'
+      })
+      .state('audioTest', {
+        url: '/audio',
+        templateUrl: 'audio/_audio.html',
+        controller: 'AudioCtrl'
       });
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(true);

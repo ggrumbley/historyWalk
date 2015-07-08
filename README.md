@@ -19,8 +19,9 @@ This is a history app that will serve as a platform for guided tours and multime
   + [x] Add Year field
   + [x] Add Ex number to each exhibit
 + [x] Build individual Exhibit page
+  + [ ] Add videogular to page
+  + [ ] Get SoundCloud API account
   + [ ] Add Audio Stream from Soundcloud
-  + [ ] Research Videogular - Angular Media Player
 
 ## License
 Code licensed under the [MIT License](http://opensource.org/licenses/MIT).
