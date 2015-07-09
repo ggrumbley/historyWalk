@@ -1,9 +1,9 @@
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-material-design
 //= require angular/angular
 //= require angular-ui-router/release/angular-ui-router
 //= require angular-rails-templates
 //= require plangular/dist/plangular.js
 //= require_tree .
 //= require_tree ./templates
-//= require bootstrap-material-design

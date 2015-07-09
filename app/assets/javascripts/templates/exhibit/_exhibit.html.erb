@@ -8,26 +8,26 @@
       {{exhibit.title}}
     </div>
   </div>
+</div>
 
+<footer class="footer">
+  <div plangular="http://soundcloud.com/majorlazer/{{exhibit.audio}}"
+    class="audioPlayer">
 
-
-    <div plangular="http://soundcloud.com/majorlazer/{{exhibit.audio}}"
-      class="audioPlayer">
-
-        <button class="playBtn" ng-click="playPause()" >
-          <i ng-if="player.playing !== track.src" class="mdi-av-play-arrow mdi-material-teal"></i>
-          <i ng-if="player.playing === track.src" class="mdi-av-pause mdi-material-teal"></i>
-        </button>
-        <div class="data pull-right">
-          <samp class="pull-left">{{ currentTime | hhmmss }}</samp>
-          <progress
-            class="pull-right"
-            ng-click="seek($event)"
-            ng-value="currentTime / duration">
-            {{ currentTime / duration }}
-          </progress>
-        </div>
-
+      <button class="playBtn" ng-click="playPause()" >
+        <i ng-if="player.playing !== track.src" class="mdi-av-play-arrow mdi-material-teal"></i>
+        <i ng-if="player.playing === track.src" class="mdi-av-pause mdi-material-teal"></i>
+      </button>
+      <div class="data pull-right">
+        <samp class="pull-left">{{ currentTime | hhmmss }}</samp>
+        <progress
+          class="pull-right"
+          ng-click="seek($event)"
+          ng-value="currentTime / duration">
+          {{ currentTime / duration }}
+        </progress>
       </div>
 
-</div>
+    </div>
+
+</footer>
