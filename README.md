@@ -19,9 +19,16 @@ This is a history app that will serve as a platform for guided tours and multime
   + [x] Add Year field
   + [x] Add Ex number to each exhibit
 + [x] Build individual Exhibit page
-  + [ ] Add videogular to page
-  + [ ] Get SoundCloud API account
-  + [ ] Add Audio Stream from Soundcloud
+  + [x] Add audio player to page
+  + [x] Get SoundCloud API account
+  + [x] Add Audio Stream from Soundcloud
++ [ ] UI/UX touchup
+  + [ ] Set audio to pause on page change
+  + [ ] Set tour title to return to collection
+  + [ ] Set swipe left and right to page between tour items
++ [ ] Add content
+  + [ ] Add Animals Riding Animals collection
+  + [ ] Add Balboa Park Content
 
 ## License
 Code licensed under the [MIT License](http://opensource.org/licenses/MIT).

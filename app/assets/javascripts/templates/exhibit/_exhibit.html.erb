@@ -1,17 +1,20 @@
-<div class="col-xs-10 col-xs-offset-1 col-md-3">
-  <img ng-src={{exhibit.image}} alt="{{exhibit.exhibit}}" >
+<div class="container">
+  <div class="col-xs-10 col-xs-offset-1 col-md-3">
+    <img ng-src={{exhibit.image}} alt="{{exhibit.exhibit}}" >
 
-  <div class="panel panel-default exDisc">
-    <div class="panel-body">
-      {{exhibit.exNum}} | {{tour.title}} <br />
-      <b>{{exhibit.artist}}</b> <br />
-      {{exhibit.title}}
+    <div class="panel panel-default exDisc">
+      <div class="panel-body">
+        {{exhibit.exNum}} | {{tour.title}} <br />
+        <b>{{exhibit.artist}}</b> <br />
+        {{exhibit.title}}
+      </div>
     </div>
   </div>
 </div>
 
 <footer class="footer">
-  <div plangular="http://soundcloud.com/majorlazer/{{exhibit.audio}}"
+  <div class="container">
+    <div plangular="http://soundcloud.com/majorlazer/{{exhibit.audio}}"
     class="audioPlayer">
 
       <button class="playBtn" ng-click="playPause()" >
@@ -27,7 +30,6 @@
           {{ currentTime / duration }}
         </progress>
       </div>
-
     </div>
-
+  </div>
 </footer>
