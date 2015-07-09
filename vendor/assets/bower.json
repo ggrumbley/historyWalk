@@ -1,10 +1,7 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-    "bootstrap-sass-official": "latest",
-    "bootstrap-material-design": "latest",
     "angular": "latest",
-    "angular-bootstrap": "latest",
     "angular-ui-router": "latest",
     "plangular": "latest"
   }

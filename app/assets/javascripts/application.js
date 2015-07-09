@@ -1,11 +1,9 @@
-//= require angular
-//= require angular-bootstrap/ui-bootstrap
-//= require jquery/dist/jquery
-//= require bootstrap-sass-official/assets/javascripts/bootstrap.js
-//= require bootstrap-material-design/dist/js/material.js
-//= require bootstrap-material-design/dist/js/ripples.js
-//= require angular-ui-router
+//= require jquery
+//= require jquery_ujs
+//= require angular/angular
+//= require angular-ui-router/release/angular-ui-router
 //= require angular-rails-templates
-//= require plangular/dist/plangular.min.js
+//= require plangular/dist/plangular.js
 //= require_tree .
 //= require_tree ./templates
+//= require bootstrap-material-design
