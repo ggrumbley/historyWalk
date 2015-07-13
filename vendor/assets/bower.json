@@ -4,6 +4,7 @@
     "angular": "latest",
     "angular-ui-router": "latest",
     "plangular": "latest",
-    "angular-touch": "latest"
+    "angular-touch": "latest",
+    "angular-animate": "latest"
   }
 }

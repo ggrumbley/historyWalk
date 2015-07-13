@@ -22,13 +22,16 @@ This is a history app that will serve as a platform for guided tours and multime
   + [x] Add audio player to page
   + [x] Get SoundCloud API account
   + [x] Add Audio Stream from Soundcloud
++ [ ] Add content
+  + [x] Add audio content for Internet Meme Collection
+  + [x] Add Animals Riding Animals collection
+  + [ ] Add Balboa Park Content
 + [ ] UI/UX touchup
   + [ ] Set audio to pause on page change
-  + [ ] Set tour title to return to collection
-  + [ ] Set swipe left and right to page between tour items
-+ [ ] Add content
-  + [ ] Add Animals Riding Animals collection
-  + [ ] Add Balboa Park Content
+  + [ ] Set audio to autoplay on load
+  + [x] Add return to collection button
+  + [x] Set swipe left and right to page between tour items
+  + [ ] Add slide-in animation for page change between tour items.
 
 ## License
 Code licensed under the [MIT License](http://opensource.org/licenses/MIT).

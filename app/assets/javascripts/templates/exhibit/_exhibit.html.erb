@@ -1,7 +1,9 @@
-<div class="container">
+<div class="container"
+      ng-swipe-right="downEx()"
+      ng-swipe-left="upEx()">
   <a class="btn btn-primary" href="tour/{{tourID}}"><i class="mdi-navigation-arrow-back"></i></a>
-  <div class="col-xs-10 col-xs-offset-1 col-md-3">
-    <img ng-src={{exhibit.image}} alt="{{exhibit.exhibit}}" >
+  <div ng-animate class="col-xs-10 col-xs-offset-1 col-md-3">
+    <img ng-src={{exhibit.image}} alt="{{exhibit.exhibit}}">
 
     <div class="panel panel-default exDisc">
       <div class="panel-body">
@@ -12,6 +14,7 @@
     </div>
   </div>
 </div>
+
 
 <footer class="footer" data-ng-init="init()">
   <div class="container">

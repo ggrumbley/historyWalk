@@ -6,7 +6,9 @@
       [
         'ui.router',
         'templates',
-        'plangular'
+        'plangular',
+        'ngTouch',
+        'ngAnimate'
       ])
     .config([
       '$stateProvider',
