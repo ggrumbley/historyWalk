@@ -32,6 +32,10 @@ This is a history app that will serve as a platform for guided tours and multime
   + [x] Add return to collection button
   + [x] Set swipe left and right to page between tour items
   + [ ] Add slide-in animation for page change between tour items.
++ [ ] Rails Back-End
+  + [ ] Setup DB and design schemas
+  + [ ] Setup controller to link db and front-end
+  + [ ] Design content input page
 
 ## License
 Code licensed under the [MIT License](http://opensource.org/licenses/MIT).
