@@ -29,6 +29,7 @@ This is a history app that will serve as a platform for guided tours and multime
 + [ ] UI/UX touchup
   + [ ] Set audio to pause on page change
   + [ ] Set audio to autoplay on load
+  + [x] Add loading message to audio player on load
   + [x] Add return to collection button
   + [x] Set swipe left and right to page between tour items
   + [ ] Add slide-in animation for page change between tour items.

@@ -16,23 +16,26 @@
 </div>
 
 
-<footer class="footer" data-ng-init="init()">
+<footer class="footer">
   <div class="container">
     <div plangular="http://soundcloud.com/gary-grumbley/{{exhibit.audio}}"
     class="audioPlayer">
+      <span class="loading" ng-hide="track">Loading...</span>
+      <div ng-show="track">
+        <button class="playBtn" ng-click="playPause()" >
+          <i ng-if="player.playing !== track.src" class="mdi-av-play-arrow mdi-material-teal"></i>
+          <i ng-if="player.playing === track.src" class="mdi-av-pause mdi-material-teal"></i>
+        </button>
+        <div class="data pull-right">
+          <samp class="pull-left">{{ currentTime | hhmmss }}</samp>
+          <progress
+            class="pull-right"
+            ng-click="seek($event)"
+            ng-value="currentTime / duration">
+            {{ currentTime / duration }}
+          </progress>
+        </div>
 
-      <button class="playBtn" ng-click="playPause()" >
-        <i ng-if="player.playing !== track.src" class="mdi-av-play-arrow mdi-material-teal"></i>
-        <i ng-if="player.playing === track.src" class="mdi-av-pause mdi-material-teal"></i>
-      </button>
-      <div class="data pull-right">
-        <samp class="pull-left">{{ currentTime | hhmmss }}</samp>
-        <progress
-          class="pull-right"
-          ng-click="seek($event)"
-          ng-value="currentTime / duration">
-          {{ currentTime / duration }}
-        </progress>
       </div>
     </div>
   </div>

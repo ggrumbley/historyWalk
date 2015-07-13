@@ -42,16 +42,16 @@ div.exDisc {
   margin-top: 20px;
 }
 
-// .audioPlayer {
-//   width: 100%;
-//   position: fixed;
-//   bottom: 0px;
-//   left: 0px;
-// }
+
 .footer {
   bottom: 0;
   position: absolute;
   width: 100%;
+  .loading {
+    margin-left: 35%;
+    margin-right: 35%;
+    font-size: 20pt;
+  }
 }
 .playBtn i {
   font-size: 40pt;
