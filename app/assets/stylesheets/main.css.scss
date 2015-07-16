@@ -1,6 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.container {
+  padding: 0;
+}
 .output {
   background: black;
   color: lime;
@@ -31,7 +34,13 @@ a.thumbnail:hover {
   h5 {
     margin: 0;
   }
-
+  img {
+    height: 150px;
+    overflow:hidden;
+  }
+  .thumbnail {
+    height: 244px;
+  }
 }
 img {
   width: 100%;
@@ -42,6 +51,22 @@ div.exDisc {
   margin-top: 20px;
 }
 
+.exhibitCont {
+  h2 {
+    padding-left: 15px;
+  }
+}
+.exhibit {
+  padding: 0;
+}
+.chev {
+  margin-top: 60%;
+  padding: 0;
+
+  i {
+    font-size: 40pt;
+  }
+}
 
 .footer {
   bottom: 0;
