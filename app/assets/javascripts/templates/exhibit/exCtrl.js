@@ -6,12 +6,13 @@
     .controller('ExCtrl', [
       '$scope',
       '$stateParams',
+      '$state',
       '$location',
       'walks',
       ExCtrl
     ]);
 
-  function ExCtrl($scope, $stateParams, $location, walks) {
+  function ExCtrl($scope, $stateParams, $state, $location, walks) {
     var tour = walks.tours[$stateParams.tourID],
         exhibits = tour.exhibits,
         tourID = $stateParams.tourID,
@@ -22,7 +23,7 @@
     $scope.index = index;
 
     //DEBUG
-    $scope.myValue=false;
+    console.log($state);
 
     $scope.downEx = function () {
       if (index != 0) {
