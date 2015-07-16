@@ -16,8 +16,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'mongoid'
+
 group :development, :test do
-  gem 'sqlite3'
   gem 'byebug',                  '3.4.0'
   gem 'web-console',             '~> 2.0'
   gem 'spring',                  '1.1.3'
@@ -30,7 +31,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor',          '0.0.2'
   gem 'puma',                    '2.11.1'
 end
