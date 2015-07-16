@@ -1,8 +1,12 @@
 <div class="container"
       ng-swipe-right="downEx()"
       ng-swipe-left="upEx()">
-
-  <div class="col-xs-10 col-xs-offset-1 col-md-3">
+  <div ng-click="downEx()"
+        class="col-xs-2 chev left">
+    <i ng-show="index != 0"
+       class="mdi-navigation-chevron-left mdi-material-teal"></i>
+  </div>
+  <div class="col-xs-8 col-md-3 exhibit">
     <img class="exImg" ng-src={{exhibit.image}} alt="{{exhibit.exhibit}}">
 
     <div class="panel panel-default exDisc">
@@ -12,6 +16,12 @@
         {{exhibit.title}}
       </div>
     </div>
+  </div>
+
+  <div ng-click="upEx()"
+      ng-show="index != (exhibits.length - 1)"
+      class="col-xs-2 chev right">
+    <i class="mdi-navigation-chevron-right mdi-material-teal"></i>
   </div>
 </div>
 

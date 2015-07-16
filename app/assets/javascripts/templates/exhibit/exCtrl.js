@@ -21,6 +21,7 @@
     $scope.exhibit = exhibits[index];
     $scope.tourID = tourID;
     $scope.index = index;
+    $scope.exhibits = exhibits;
 
     //DEBUG
     console.log($state);
