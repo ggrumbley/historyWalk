@@ -21,6 +21,9 @@
     $scope.tourID = tourID;
     $scope.index = index;
 
+    //DEBUG
+    $scope.myValue=false;
+
     $scope.downEx = function () {
       if (index != 0) {
         index --;
