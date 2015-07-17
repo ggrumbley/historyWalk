@@ -1,0 +1,12 @@
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap
+//= require bootstrap-material-design
+//= require angular/angular
+//= require angular-ui-router/release/angular-ui-router
+//= require angular-rails-templates
+//= require plangular/dist/plangular.js
+//= require angular-touch/angular-touch.js
+//= require angular-animate/angular-animate.js
+//= require_tree .
+//= require_tree ./templates
