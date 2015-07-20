@@ -1,0 +1,52 @@
+<div class="container"
+      ng-swipe-right="downEx()"
+      ng-swipe-left="upEx()">
+  <div ng-click="downEx()"
+        class="col-xs-2 chev left">
+    <i ng-show="index != 0"
+       class="mdi-navigation-chevron-left mdi-material-teal"></i>
+  </div>
+  <div class="col-xs-8 col-md-3 exhibit">
+    <img class="exImg" ng-src={{exhibit.image}} alt="{{exhibit.exhibit}}">
+
+    <div class="panel panel-default exDisc">
+      <div class="panel-body">
+        {{exhibit.exNum}} | <a href="tour/{{tourID}}">{{tour.title}}</a> <br />
+        <b>{{exhibit.artist}}</b> <br />
+        {{exhibit.title}}
+      </div>
+    </div>
+  </div>
+
+  <div ng-click="upEx()"
+      ng-show="index != (tour.exhibits.length - 1)"
+      class="col-xs-2 chev right">
+    <i class="mdi-navigation-chevron-right mdi-material-teal"></i>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+    <div plangular="http://soundcloud.com/gary-grumbley/{{exhibit.audio}}"
+    class="audioPlayer">
+      <span class="loading" ng-hide="track">Loading...</span>
+      <div ng-show="track">
+        <button class="playBtn" ng-click="playPause()" >
+          <i ng-if="player.playing !== track.src" class="mdi-av-play-arrow mdi-material-teal"></i>
+          <i ng-if="player.playing === track.src" class="mdi-av-pause mdi-material-teal"></i>
+        </button>
+        <div class="data pull-right">
+          <samp class="pull-left">{{ currentTime | hhmmss }}</samp>
+          <progress
+            class="pull-right"
+            ng-click="seek($event)"
+            ng-value="currentTime / duration">
+            {{ currentTime / duration }}
+          </progress>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
