@@ -3,12 +3,12 @@
 
   angular
     .module('historyWalk')
-    .factory('tours', [
-      '$http',
+    .factory('Tours', [
+      '$resource',
       Tours
     ]);
 
-    function Tours($http) {
-
-    };
-})();
+    function Tours($resource) {
+      return $resource("/tours");
+    }
+}());

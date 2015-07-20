@@ -5,12 +5,12 @@
     .module('historyWalk')
     .controller('MainCtrl', [
       '$scope',
-      'walks',
+      'Tours',
       MainCtrl
     ]);
 
-  function MainCtrl($scope, walks) {
-    $scope.tours = walks.tours;
-  };
+  function MainCtrl($scope, Tours) {
+    $scope.tours = Tours.query();
+  }
 
 })();

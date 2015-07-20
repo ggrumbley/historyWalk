@@ -3,6 +3,7 @@
 
 asset 'angular'
 asset 'angular-ui-router'
+asset 'angular-resource'
 asset 'plangular'
 asset 'angular-touch'
 asset 'angular-animate'

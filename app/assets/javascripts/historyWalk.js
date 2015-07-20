@@ -8,7 +8,8 @@
         'templates',
         'plangular',
         'ngTouch',
-        'ngAnimate'
+        'ngAnimate',
+        'ngResource'
       ])
     .config([
       '$stateProvider',

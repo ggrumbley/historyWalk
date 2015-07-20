@@ -11,6 +11,8 @@ gem 'bootstrap-sass'
 gem 'bootstrap-material-design'
 gem 'bower-rails'
 gem 'angular-rails-templates'
+gem 'responders', '~> 2.0'
+
 gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc

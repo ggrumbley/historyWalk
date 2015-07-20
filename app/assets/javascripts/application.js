@@ -8,5 +8,6 @@
 //= require plangular/dist/plangular.js
 //= require angular-touch/angular-touch.js
 //= require angular-animate/angular-animate.js
+//= require angular-resource/angular-resource.js
 //= require_tree .
 //= require_tree ./templates
