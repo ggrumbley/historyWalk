@@ -1,0 +1,5 @@
+asset 'angular'
+asset 'angular-ui-router'
+asset 'plangular'
+asset 'angular-touch'
+asset 'angular-animate'
