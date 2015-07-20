@@ -9,6 +9,6 @@
     ]);
 
     function Tours($resource) {
-      return $resource("/tours");
+      return $resource("/tours/:id", {id: "@id"}, {update: {method: "PUT"}});  
     }
 }());

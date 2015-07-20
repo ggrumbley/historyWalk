@@ -6,11 +6,11 @@
     .controller('MediaCtrl', [
       '$scope',
       '$stateParams',
-      'walks',
+      'Tours',
       MediaCtrl
     ]);
 
-  function MediaCtrl($scope, $stateParams, walks) {
+  function MediaCtrl($scope, $stateParams, Tours) {
     $scope.walk = walks.walks[$stateParams.id];
     var self = this;
     self.selection = '';

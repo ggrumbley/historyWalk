@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720174820) do
+ActiveRecord::Schema.define(version: 20150720194656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "exhibits", force: :cascade do |t|
+    t.integer  "tour_id"
+    t.integer  "exNum"
+    t.string   "artist"
+    t.string   "title"
+    t.integer  "year"
+    t.text     "script"
+    t.string   "audio"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "exhibits", ["tour_id"], name: "index_exhibits_on_tour_id", using: :btree
 
   create_table "tours", force: :cascade do |t|
     t.string   "title"

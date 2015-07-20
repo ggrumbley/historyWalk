@@ -40,6 +40,6 @@
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(true);
     plangularConfigProvider.clientId = '9b3a578e8c2b9a25ede5ddf066cb82fe';
-  };
+  }
 
 })();

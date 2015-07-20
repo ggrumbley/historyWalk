@@ -1,14 +1,14 @@
 <div class="container">
   <div class="row" ng-repeat="tour in tours">
     <div class="col-xs-10 col-xs-offset-1 col-md-3">
-      <a href="tour/{{$index}}" class="thumbnail">
+      <a href="tour/{{tour.id}}" class="thumbnail">
         <div class="caption homeTours">
           <p class="pull-right">
             <span class="badge">{{tour.exhibits.length}}</span> stops
           </p>
           <h4>{{tour.title}}</h4>
         </div>
-        <img src='<%= asset_path("ducreux2.jpg") %>' />
+        <img ng-src='<%= asset_path("balboa.jpg") %>' />
       </a>
     </div>
 

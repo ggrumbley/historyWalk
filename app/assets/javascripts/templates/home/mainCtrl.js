@@ -11,6 +11,7 @@
 
   function MainCtrl($scope, Tours) {
     $scope.tours = Tours.query();
+    
   }
 
 })();

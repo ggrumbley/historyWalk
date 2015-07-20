@@ -20,4 +20,9 @@ class ToursController < ApplicationController
   def destroy
     respond_with Tour.destroy(params[:id])
   end
+
+  private
+  def post_params
+    params.require(:tour).permit(:link, :title)
+  end
 end

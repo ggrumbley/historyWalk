@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  root to: 'application#angular'
 
-  resources :exhibits
+  resources :exhibits, defaults: {format: 'json'}
   resources :tours, defaults: {format: 'json'}
-  root 'application#angular'
   get '*path' => 'application#angular'
 
 end

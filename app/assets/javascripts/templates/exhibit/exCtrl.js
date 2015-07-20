@@ -8,11 +8,11 @@
       '$stateParams',
       '$state',
       '$location',
-      'walks',
+      'Tours',
       ExCtrl
     ]);
 
-  function ExCtrl($scope, $stateParams, $state, $location, walks) {
+  function ExCtrl($scope, $stateParams, $state, $location, Tours) {
     var tour = walks.tours[$stateParams.tourID],
         exhibits = tour.exhibits,
         tourID = $stateParams.tourID,

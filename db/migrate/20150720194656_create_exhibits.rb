@@ -1,6 +1,16 @@
 class CreateExhibits < ActiveRecord::Migration
+
   def change
+
+    create_table :tours do |t|
+      t.string :title
+      t.string :cover
+
+      t.timestamps null: false
+    end
+
     create_table :exhibits do |t|
+      t.integer :tour_id, index:true
       t.integer :exNum
       t.string :artist
       t.string :title
