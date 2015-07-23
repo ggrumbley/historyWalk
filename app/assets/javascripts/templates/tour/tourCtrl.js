@@ -6,22 +6,22 @@
     .controller('TourCtrl', [
       '$scope',
       '$stateParams',
-      'Tours',
+      'Restangular',
       TourCtrl
     ]);
 
-  function TourCtrl($scope, $stateParams, Tours) {
-    var Walk = Tours;
-    $scope.walk = Walk.get({id: $stateParams.tourID});
-    console.log($scope.walk);
-    
-    //     tours = walk.exhibits,
-    //     tourID = $stateParams.tourID;
-    //
-    // $scope.walk = walk;
-    // $scope.tours = tours;
-    // $scope.tourID = tourID;
-    var self = this;
+  function TourCtrl($scope, $stateParams, Restangular) {
+    var tourID = $stateParams.tourID;
+
+    Restangular.one('tours', tourID).get()
+    .then(function (tour) {
+      $scope.tour = tour;
+
+      tour.getList('exhibits').then(function (exhibits) {
+        $scope.exhibits = exhibits;
+      });
+    });
+
   }
 
 })();

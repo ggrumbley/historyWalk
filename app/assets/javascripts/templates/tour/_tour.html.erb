@@ -1,21 +1,21 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-3 exhibitCont">
-      <h2>{{walk.title}}</h2>
+      <h2>{{tour.title}}</h2>
     </div>
   </div>
-  <!-- <div ng-repeat="tour in tours">
+  <div ng-repeat="exhibit in exhibits">
   <div class="col-xs-6 col-sm-6 col-md-3 exhibits">
-      <a href="tour/{{tourID}}/exhibit/{{$index}}" class="thumbnail">
-        <img ng-src={{tour.image}} alt="{{tour.title}}" >
+      <a href="tour/{{tour.id}}/exhibit/{{exhibit.id}}" class="thumbnail">
+        <img ng-src='<%= asset_path("rainbow.jpg") %>' alt="{{exhibit.title}}" >
         <div class="caption">
           <h5>
-            <b>{{tour.exNum}}</b> | {{tour.artist}}. <br />
-            <em>{{tour.title}}</em>. {{tour.year}}
+            <b>{{exhibit.exNum}}</b> | {{exhibit.artist}}. <br />
+            <em>{{exhibit.title}}</em>. {{exhibit.year}}
           </h5>
 
         </div>
       </a>
     </div>
-  </div> -->
+  </div>
 </div>

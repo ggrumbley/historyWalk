@@ -2,7 +2,7 @@ class ExhibitsController < ApplicationController
   respond_to :json
 
   def index
-    respond_with Exhibit.all
+    respond_with Exhibit.where(tour: params[:tour_id])
   end
 
   def show

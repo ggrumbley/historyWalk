@@ -34,7 +34,7 @@
         controller: 'TourCtrl'
       })
       .state('exhibit', {
-        url: '/tour/{tourID}/exhibit/{exID}',
+        url: '/tour/{tourID}/exhibit/{exhibitID}',
         templateUrl: 'exhibit/_exhibit.html',
         controller: 'ExCtrl'
       });

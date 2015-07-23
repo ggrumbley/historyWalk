@@ -8,35 +8,57 @@
       '$stateParams',
       '$state',
       '$location',
-      'Tours',
+      'Restangular',
       ExCtrl
     ]);
 
-  function ExCtrl($scope, $stateParams, $state, $location, Tours) {
-    var tour = walks.tours[$stateParams.tourID],
-        exhibits = tour.exhibits,
-        tourID = $stateParams.tourID,
-        index = $stateParams.exID;
-    $scope.tour = tour;
-    $scope.exhibit = exhibits[index];
-    $scope.tourID = tourID;
-    $scope.index = index;
-    $scope.exhibits = exhibits;
+  function ExCtrl($scope, $stateParams, $state, $location, Restangular) {
+    var tourID = $stateParams.tourID,
+        exhibitID = $stateParams.exhibitID;
 
-    //DEBUG
-    console.log($state);
+    Restangular.one('tours', tourID).get()
+    .then(function (tour) {
+      $scope.tour = tour;
 
-    $scope.downEx = function () {
-      if (index != 0) {
-        index --;
-      }
-      $location.url('tour/' + tourID + '/exhibit/' + index);
-    };
-    $scope.upEx = function () {
-      if (index != (exhibits.length - 1)) {
-        index ++;
-      }
-      $location.url('tour/' + tourID + '/exhibit/' + index);
-    };
-  };
+      tour.one('exhibits', exhibitID).get()
+      .then(function (exhibit) {
+        $scope.exhibit = exhibit;
+      });
+
+      tour.getList('exhibits')
+      .then(function (exhibits) {
+        console.log(exhibits);
+        console.log(exhibits[0].id);
+
+        $scope.downExhibit = function () {
+          if (exhibitID != exhibits[0].id) {
+            exhibitID --;
+            console.log(exhibitID);
+            $location.url('tour/' + tourID + '/exhibit/' + exhibitID);
+          }
+        };
+
+        $scope.upExhibit = function () {
+          exhibitID ++;
+          console.log(exhibitID);
+        };
+
+      });
+    });
+
+
+    //
+    // $scope.downEx = function () {
+    //   if (index != 0) {
+    //     index --;
+    //   }
+    //   $location.url('tour/' + tourID + '/exhibit/' + index);
+    // };
+    // $scope.upEx = function () {
+    //   if (index != (exhibits.length - 1)) {
+    //     index ++;
+    //   }
+    //   $location.url('tour/' + tourID + '/exhibit/' + index);
+    // };
+  }
 })();
