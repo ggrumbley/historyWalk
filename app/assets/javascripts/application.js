@@ -5,9 +5,11 @@
 //= require angular/angular
 //= require angular-ui-router/release/angular-ui-router
 //= require angular-rails-templates
-//= require plangular/dist/plangular.js
-//= require angular-touch/angular-touch.js
-//= require angular-animate/angular-animate.js
-//= require angular-resource/angular-resource.js
+//= require plangular/dist/plangular
+//= require angular-touch/angular-touch
+//= require angular-animate/angular-animate
+//= require angular-resource/angular-resource
+//= require lodash/lodash
+//= require restangular/dist/restangular
 //= require_tree .
 //= require_tree ./templates

@@ -9,7 +9,8 @@
         'plangular',
         'ngTouch',
         'ngAnimate',
-        'ngResource'
+        'ngResource',
+        'restangular'
       ])
     .config([
       '$stateProvider',

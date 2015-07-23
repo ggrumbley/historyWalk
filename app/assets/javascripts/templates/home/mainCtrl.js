@@ -5,13 +5,15 @@
     .module('historyWalk')
     .controller('MainCtrl', [
       '$scope',
-      '$resource',
+      'Restangular',
       MainCtrl
     ]);
 
-  function MainCtrl($scope, $resource) {
-    $scope.tours = $resource('/tours/:id').query();
-
+  function MainCtrl($scope, Restangular) {
+    Restangular.all('tours').getList()
+    .then(function (tours) {
+      $scope.tours = tours;
+    });
   }
 
 })();
