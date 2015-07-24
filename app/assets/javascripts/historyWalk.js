@@ -36,7 +36,7 @@
       .state('exhibit', {
         url: '/tour/{tourID}/exhibit/{exhibitID}',
         templateUrl: 'exhibit/_exhibit.html',
-        controller: 'ExCtrl'
+        controller: 'ExhibitCtrl'
       });
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(true);

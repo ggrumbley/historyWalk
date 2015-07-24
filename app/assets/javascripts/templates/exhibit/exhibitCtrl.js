@@ -3,16 +3,16 @@
 
   angular
     .module('historyWalk')
-    .controller('ExCtrl', [
+    .controller('ExhibitCtrl', [
       '$scope',
       '$stateParams',
       '$state',
       '$location',
       'Restangular',
-      ExCtrl
+      ExhibitCtrl
     ]);
 
-  function ExCtrl($scope, $stateParams, $state, $location, Restangular) {
+  function ExhibitCtrl($scope, $stateParams, $state, $location, Restangular) {
     var tourID = $stateParams.tourID,
         exhibitID = $stateParams.exhibitID;
 
