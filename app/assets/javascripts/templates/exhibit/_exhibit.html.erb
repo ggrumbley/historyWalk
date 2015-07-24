@@ -3,7 +3,7 @@
       ng-swipe-left="upExhibit()">
   <div ng-click="downExhibit()"
         class="col-xs-2 chev left">
-    <i ng-show="index != 0"
+    <i ng-show="exhibitID != exhibitFloor"
        class="mdi-navigation-chevron-left mdi-material-teal"></i>
   </div>
   <div class="col-xs-8 col-md-3 exhibit">
@@ -19,7 +19,7 @@
   </div>
 
   <div ng-click="upExhibit()"
-      ng-show="index != (tour.exhibits.length - 1)"
+      ng-show="exhibitID != exhibitCeil"
       class="col-xs-2 chev right">
     <i class="mdi-navigation-chevron-right mdi-material-teal"></i>
   </div>

@@ -16,6 +16,8 @@
     var tourID = $stateParams.tourID,
         exhibitID = $stateParams.exhibitID;
 
+    $scope.exhibitID = exhibitID;
+
     Restangular.one('tours', tourID).get()
     .then(function (tour) {
       $scope.tour = tour;
@@ -27,20 +29,22 @@
 
       tour.getList('exhibits')
       .then(function (exhibits) {
-        console.log(exhibits);
-        console.log(exhibits[0].id);
+
+        $scope.exhibitCeil = exhibits[exhibits.length -1].id;
+        $scope.exhibitFloor = exhibits[0].id;
 
         $scope.downExhibit = function () {
-          if (exhibitID != exhibits[0].id) {
+          if (exhibitID != $scope.exhibitFloor) {
             exhibitID --;
-            console.log(exhibitID);
             $location.url('tour/' + tourID + '/exhibit/' + exhibitID);
           }
         };
 
         $scope.upExhibit = function () {
-          exhibitID ++;
-          console.log(exhibitID);
+          if (exhibitID != $scope.exhibitCeil) {
+            exhibitID ++;
+            $location.url('tour/' + tourID + '/exhibit/' + exhibitID);
+          }
         };
 
       });
