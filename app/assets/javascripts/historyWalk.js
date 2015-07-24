@@ -9,7 +9,6 @@
         'plangular',
         'ngTouch',
         'ngAnimate',
-        'ngResource',
         'restangular'
       ])
     .config([

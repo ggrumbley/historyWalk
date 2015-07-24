@@ -6,13 +6,12 @@
     .controller('ExhibitCtrl', [
       '$scope',
       '$stateParams',
-      '$state',
       '$location',
       'Restangular',
       ExhibitCtrl
     ]);
 
-  function ExhibitCtrl($scope, $stateParams, $state, $location, Restangular) {
+  function ExhibitCtrl($scope, $stateParams, $location, Restangular) {
     var tourID = $stateParams.tourID,
         exhibitID = $stateParams.exhibitID;
 
@@ -48,21 +47,8 @@
         };
 
       });
+
     });
 
-
-    //
-    // $scope.downEx = function () {
-    //   if (index != 0) {
-    //     index --;
-    //   }
-    //   $location.url('tour/' + tourID + '/exhibit/' + index);
-    // };
-    // $scope.upEx = function () {
-    //   if (index != (exhibits.length - 1)) {
-    //     index ++;
-    //   }
-    //   $location.url('tour/' + tourID + '/exhibit/' + index);
-    // };
   }
 })();
