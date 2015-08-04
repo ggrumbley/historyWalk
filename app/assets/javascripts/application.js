@@ -5,7 +5,6 @@
 //= require angular/angular
 //= require angular-ui-router/release/angular-ui-router
 //= require angular-rails-templates
-//= require plangular/dist/plangular
 //= require angular-touch/angular-touch
 //= require angular-animate/angular-animate
 //= require lodash/lodash

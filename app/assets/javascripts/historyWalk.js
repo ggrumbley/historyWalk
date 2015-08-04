@@ -6,7 +6,6 @@
       [
         'ui.router',
         'templates',
-        'plangular',
         'ngTouch',
         'ngAnimate',
         'restangular'
@@ -15,11 +14,10 @@
       '$stateProvider',
       '$urlRouterProvider',
       '$locationProvider',
-      'plangularConfigProvider',
       Router
     ]);
 
-  function Router($stateProvider, $urlRouterProvider, $locationProvider, plangularConfigProvider) {
+  function Router($stateProvider, $urlRouterProvider, $locationProvider) {
 
     $stateProvider
       .state('home', {
@@ -39,7 +37,6 @@
       });
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(true);
-    plangularConfigProvider.clientId = '9b3a578e8c2b9a25ede5ddf066cb82fe';
   }
 
 })();
