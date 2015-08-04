@@ -7,7 +7,7 @@
   <div ng-repeat="exhibit in exhibits">
   <div class="col-xs-6 col-sm-6 col-md-3 exhibits">
       <a href="tour/{{tour.id}}/exhibit/{{exhibit.id}}" class="thumbnail">
-        <img ng-src='<%= asset_path("rainbow.jpg") %>' alt="{{exhibit.title}}" >
+        <img ng-src='{{exhibit.image}}' alt="{{exhibit.title}}" >
         <div class="caption">
           <h5>
             <b>{{exhibit.exNum}}</b> | {{exhibit.artist}}. <br />

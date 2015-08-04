@@ -5,9 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-meme = Tour.create!(title: "Internet Memes", cover: "ducreux2.jpg")
-animal = Tour.create!(title: "Animals Riding Animals", cover: "gator.jpg")
-balboa = Tour.create!(title: "Balboa Park", cover: "balboa.jpg")
+meme = Tour.create!(title: "Internet Memes", cover: "http://i.imgur.com/oQiQqw1.jpg")
+animal = Tour.create!(title: "Animals Riding Animals", cover: "http://i.imgur.com/Ro7nB0A.jpg")
+balboa = Tour.create!(title: "Balboa Park", cover: "http://i.imgur.com/eJ5yuj0.jpg")
 
 
 meme.exhibits.create([
@@ -18,7 +18,7 @@ meme.exhibits.create([
     year: 2009,
     script: 'A portrait from 1793 remixed with archaic rap lyrics. What\'s not to love?',
     audio: '1-ducreux',
-    image: "ducreux2.jpg"
+    image: "http://i.imgur.com/oQiQqw1.jpg"
   },
   {
     exNum: 102,
@@ -27,7 +27,7 @@ meme.exhibits.create([
     year: 2005,
     script: 'In this odd flash animation the user is treated to a hilarious romp as Charlie the Unicorn goes in search of Candy Mountain.',
     audio: '2-charlie',
-    image: "charlie.jpg"
+    image: "http://i.imgur.com/3ojKQOE.jpg"
   },
   {
     exNum: 103,
@@ -36,7 +36,7 @@ meme.exhibits.create([
     year: 2011,
     script: 'Adventuring is dangerous, some people have to hang it up after a simple arrow to the knee.',
     audio: '3-arrowknee',
-    image: "arrowToKnee.jpg"
+    image: "http://i.imgur.com/zxVUwIu.jpg"
   },
   {
     exNum: 104,
@@ -45,7 +45,7 @@ meme.exhibits.create([
     year: 1998,
     script: 'The first work hailing from poorly produced TV. This unfortunate lady eats it.',
     audio: '4-grapelady',
-    image: "grapeLady.jpg"
+    image: "http://i.imgur.com/LpD2pgX.jpg"
   },
   {
     exNum: 105,
@@ -54,7 +54,7 @@ meme.exhibits.create([
     year: 2002,
     script: 'This Canadian kid has mad skills.',
     audio: '5-swkid',
-    image: "swKid.jpg"
+    image: "http://i.imgur.com/wrrz4l7.jpg"
   },
   {
     exNum: 106,
@@ -63,7 +63,7 @@ meme.exhibits.create([
     year: 2004,
     script: 'Words fail me.',
     audio: '6-numa',
-    image: "numa.jpg"
+    image: "http://i.imgur.com/rmoiDm7.jpg"
   },
   {
     exNum: 107,
@@ -72,7 +72,7 @@ meme.exhibits.create([
     year: 2005,
     script: 'Leeroy Jenkins makes enemies in the World... of Warcraft.',
     audio: '7-leeroy',
-    image: "leeroy.jpg"
+    image: "http://i.imgur.com/xj6nwDC.jpg"
   },
   {
     exNum: 108,
@@ -81,7 +81,7 @@ meme.exhibits.create([
     year: 2010,
     script: 'All the way across the sky! I am so high right now.',
     audio: '8-rainbow',
-    image: "rainbow.jpg"
+    image: "http://i.imgur.com/XOQMc8E.jpg"
   },
   {
     exNum: 109,
@@ -90,7 +90,7 @@ meme.exhibits.create([
     year: 2002,
     script: 'I am a ba na na!',
     audio: '9-pbjtime',
-    image: "pbjt.jpg"
+    image: "http://i.imgur.com/iGP77aI.jpg"
   }
 ])
 animal.exhibits.create([
@@ -101,7 +101,7 @@ animal.exhibits.create([
     year: 2015,
     script: "This is a Racoon riding an Alligator.",
     audio: '201-raccoon',
-    image: "gator.jpg"
+    image: "http://i.imgur.com/e4RSLOK.jpg"
   },
   {
     exNum: 202,
@@ -110,7 +110,7 @@ animal.exhibits.create([
     year: 2015,
     script: "This is a goat riding a pony.",
     audio: '202-goat',
-    image: "goat.jpg"
+    image: "http://i.imgur.com/qt76OeF.jpg"
   },
   {
     exNum: 203,
@@ -119,7 +119,7 @@ animal.exhibits.create([
     year: 2015,
     script: "This is a rooster riding a turtle.",
     audio: '203-rooster',
-    image: "rooster_turtle.jpg"
+    image: "http://i.imgur.com/npkQ3Xp.jpg"
   },
   {
     exNum: 204,
@@ -128,7 +128,7 @@ animal.exhibits.create([
     year: 2015,
     script: "This is a Weasel riding a Woodpecker.",
     audio: '204-weasel',
-    image: "weasel_woodpecker.jpg"
+    image: "http://i.imgur.com/Ro7nB0A.jpg"
   },
   {
     exNum: 205,
@@ -137,7 +137,7 @@ animal.exhibits.create([
     year: 2015,
     script: "This is a pug riding a horse.",
     audio: '205-pug',
-    image: "pug_horse.jpg"
+    image: "http://i.imgur.com/48EEqx2.jpg"
   }
 ])
 
@@ -149,6 +149,6 @@ balboa.exhibits.create([
     year: 1915,
     script: "Balboa Park Gardens are beautiful year round.",
     audio: "205-pug",
-    image: "botanicalGardens.jpg"
+    image: "http://i.imgur.com/eJ5yuj0.jpg"
   }
   ])
