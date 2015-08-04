@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+  get 'tours/index'
+  end
+
   root to: 'application#angular'
 
   resources :tours, defaults: {format: 'json'} do

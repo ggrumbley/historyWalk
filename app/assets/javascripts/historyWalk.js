@@ -35,7 +35,6 @@
         templateUrl: 'exhibit/_exhibit.html',
         controller: 'ExhibitCtrl'
       });
-    $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(true);
   }
 
