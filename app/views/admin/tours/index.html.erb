@@ -8,4 +8,15 @@
     <% end %>
 
   </ul>
+
+  <%= form_for(@tour, url: admin_tours_path) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :cover %>
+    <%= f.text_field :cover %>
+
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+
 </div>
