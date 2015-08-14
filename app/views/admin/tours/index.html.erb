@@ -10,6 +10,9 @@
   </ul>
 
   <%= form_for(@tour, url: admin_tours_path) do |f| %>
+
+    <%= render 'shared/error_messages', object: f.object %>
+
     <%= f.label :title %>
     <%= f.text_field :title %>
 

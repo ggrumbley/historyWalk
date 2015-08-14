@@ -15,8 +15,10 @@ class Admin::ToursController < ApplicationController
   def create
     @tour = Tour.new(tour_params)
     if @tour.save
+      flash[:success] = "Tour created!"
       redirect_to admin_tours_path
     else
+      flash[:danger] = "Tour not created!"
       @tours = Tour.all
       render action: 'index'
     end
