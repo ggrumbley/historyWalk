@@ -24,11 +24,15 @@ class Admin::ToursController < ApplicationController
     end
   end
 
-  private
-
-    def set_tour
-      @tour = Tour.find(params[:id])
+  def destroy
+    @tour = Tour.find(params[:id])
+    @tour.destroy
+    respond_to do |format|
+      format.html notice: "Tour successfully destroyed."
+      format.json { head :no_content }
     end
+  end
+  private
 
     def tour_params
       params.require(:tour).permit(:title, :cover)

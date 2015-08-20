@@ -1,15 +1,8 @@
-
-<div class="container">
-  <h1>Tours</h1>
-
-  <ul>
-    <% @tours.each do |tour| %>
-      <li><%= tour.title %></li>
-    <% end %>
-
-  </ul>
-
-  <%= form_for(@tour, url: admin_tours_path) do |f| %>
+<header>
+  <h2>Tour List</h2>
+</header>
+<section>
+  <%= form_for(@tour, class: "form-horizontal", url: admin_tours_path) do |f| %>
 
     <%= render 'shared/error_messages', object: f.object %>
 
@@ -21,5 +14,24 @@
 
     <%= f.submit class: "btn btn-primary" %>
   <% end %>
+</section>
 
-</div>
+<section>
+  <header>
+    <h3>Your Tours</h3>
+  </header>
+
+  <div class="list-group">
+    <% @tours.each do |tour| %>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4><%= tour.title %></h4>
+          <%= link_to admin_tour_url(@tour), method: :delete, class: "btn btn-danger btn-xs", data: {confirm: 'Are you sure you want to delete this tour?'} do %>
+            <i class="mdi-action-delete"></i>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</section>
