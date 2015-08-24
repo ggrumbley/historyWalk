@@ -27,8 +27,9 @@ class Admin::ToursController < ApplicationController
   def destroy
     @tour = Tour.find(params[:id])
     @tour.destroy
+
     respond_to do |format|
-      format.html notice: "Tour successfully destroyed."
+      format.html { redirect_to admin_tours_path }
       format.json { head :no_content }
     end
   end

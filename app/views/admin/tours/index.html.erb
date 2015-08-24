@@ -25,10 +25,10 @@
     <% @tours.each do |tour| %>
       <div class="panel panel-default">
         <div class="panel-body">
-          <h4><%= tour.title %></h4>
-          <%= link_to admin_tour_url(@tour), method: :delete, class: "btn btn-danger btn-xs", data: {confirm: 'Are you sure you want to delete this tour?'} do %>
+          <%= link_to admin_tour_path(tour), method: :delete, class: "btn btn-danger btn-xs pull-right", data: {confirm: 'Are you sure you want to delete this tour?'} do %>
             <i class="mdi-action-delete"></i>
           <% end %>
+          <h4><%= tour.title %></h4>
         </div>
       </div>
     <% end %>
