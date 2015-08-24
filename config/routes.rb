@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :tours, only: [:index, :create, :edit, :destroy]
+    resources :tours
   end
 
   root to: 'application#angular'

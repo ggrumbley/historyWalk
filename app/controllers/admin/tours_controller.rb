@@ -34,6 +34,20 @@ class Admin::ToursController < ApplicationController
     end
   end
 
+  def update
+    @tour = Tour.find(params[:id])
+
+    respond_to do |format|
+      if @tour.update_attributes(tour_params)
+        format.html { redirect_to admin_tours_url, notice: 'Tour was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit"}
+        format.json { render json: @tour.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def destroy
     @tour = Tour.find(params[:id])
     @tour.destroy
@@ -46,6 +60,6 @@ class Admin::ToursController < ApplicationController
   private
 
     def tour_params
-      params.require(:tour).permit(:title, :cover)
+      params.require(:tour).permit(:title, :cover, :picture)
     end
 end

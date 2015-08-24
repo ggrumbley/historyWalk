@@ -2,7 +2,18 @@
   <h2>Tour List</h2>
 </header>
 <section>
-  <%= render 'form' %>
+  <%= form_for(@tour, class: "form-horizontal", url: admin_tours_path, html: { multipart: true }) do |f| %>
+
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :cover %>
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
 </section>
 
 <section>
@@ -13,7 +24,7 @@
   <div class="list-group">
     <% @tours.each do |tour| %>
       <div class="panel panel-default">
-        <div class="panel-body clearfix">
+        <div class="panel-body">
           <span class="pull-right">
             <%= link_to edit_admin_tour_path(tour), class: "btn btn-info btn-xs" do %>
               <i class="mdi-editor-mode-edit"></i>
@@ -23,8 +34,17 @@
               <i class="mdi-action-delete"></i>
             <% end %>
           </span>
+          <div class="list-group-item">
 
-          <h3><%= link_to tour.title, admin_tour_path(tour) %></h3>
+            <div class="row-picture">
+              <%= image_tag tour.picture.url, class: "coverImage row-picture" if tour.picture? %>
+            </div>
+
+            <div class="row-content">
+              <h3 class="list-group-item-heading"><%= link_to tour.title, admin_tour_path(tour) %></h3>
+            </div>
+
+          </div>
         </div>
       </div>
     <% end %>

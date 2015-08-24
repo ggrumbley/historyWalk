@@ -23,6 +23,6 @@ class ToursController < ApplicationController
 
   private
   def post_params
-    params.require(:tour).permit(:link, :title)
+    params.require(:tour).permit(:link, :title, :picture)
   end
 end
