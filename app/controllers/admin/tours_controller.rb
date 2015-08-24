@@ -10,6 +10,12 @@ class Admin::ToursController < ApplicationController
   end
 
   def show
+    @tour = Tour.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @tour }
+    end
   end
 
   def edit

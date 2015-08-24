@@ -24,7 +24,7 @@
             <% end %>
           </span>
 
-          <h3><%= tour.title %></h3>
+          <h3><%= link_to tour.title, admin_tour_path(tour) %></h3>
         </div>
       </div>
     <% end %>
