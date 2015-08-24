@@ -1,0 +1,12 @@
+<%= form_for(@tour, class: "form-horizontal", url: admin_tours_path) do |f| %>
+
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :cover %>
+  <%= f.text_field :cover %>
+
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

@@ -12,6 +12,10 @@ class Admin::ToursController < ApplicationController
   def show
   end
 
+  def edit
+    @tour = Tour.find(params[:id])
+  end
+
   def create
     @tour = Tour.new(tour_params)
     if @tour.save
