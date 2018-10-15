@@ -14,7 +14,7 @@ This is a history app that will serve as a platform for guided tours and multime
 + [x] Add images to walks
   + [x] Set one image from walk to cover image
 + [x] Fix route handling on manual page load
-+ [x] Build tour page of tiles  
++ [x] Build tour page of tiles
   + [x] Add artist field
   + [x] Add Year field
   + [x] Add Ex number to each exhibit
@@ -25,22 +25,22 @@ This is a history app that will serve as a platform for guided tours and multime
 + [ ] Rails Back-End
   + [x] Setup DB and design schemas
   + [x] Setup controller to link db and front-end
-  + [ ] Design content input page
-+ [ ] Get Postgres Branch into master
-  + [ ]
+  + [x] Design content input page
++ [x] Get Postgres Branch into master
+  + [x]
 
 ## Feature Roadmap
-+ [ ] UI/UX touchup
-  + [ ] Set audio to pause on page change
-  + [ ] Set audio to autoplay on load
++ [x] UI/UX touchup
+  + [x] Set audio to pause on page change
+  + [x] Set audio to autoplay on load
   + [x] Add loading message to audio player on load
   + [x] Add return to collection button
   + [x] Set swipe left and right to page between tour items
-  + [ ] Add slide-in animation for page change between tour items.
-+ [ ] Add content
+  + [x] Add slide-in animation for page change between tour items.
++ [x] Add content
   + [x] Add audio content for Internet Meme Collection
   + [x] Add Animals Riding Animals collection
-  + [ ] Add Balboa Park Content
+  + [x] Add Balboa Park Content
 
 
 ## License
